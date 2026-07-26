@@ -1,0 +1,8 @@
+data_leak = indra_chowk.columns
+leak_list = [ ]
+for element in data_leak:
+    leak_list.append(element)
+print(leak_list)
+
+for encoded_disease,duplicate_row in indra_chowk.groupby(leak_list):
+     display(duplicate_row)
