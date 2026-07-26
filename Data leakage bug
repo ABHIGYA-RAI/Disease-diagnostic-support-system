@@ -1,0 +1,7 @@
+The splitting of duplicte symptoms rows led to some of them going to training set and rest of them going to testing set. This caused the classifiers to gain a
+perfect 1.00 scores which didn't evaluate if the classifiers learned the patterns from the dataset or not. 
+
+The debugging of this issue can be done in three steps:
+1. Group the different types of duplicate symptom rows together.
+2. Assign an ID to each group.
+3. Pass the ID to a scikit-learn function that will send those groups either in training set or testing set.
