@@ -52,8 +52,27 @@ print(testing_index)
 //These are the training dataframe and testing dataframe
 training_rows = indra_chowk.iloc[training_index]
 display(training_rows)
-
 testing_rows = indra_chowk.iloc[testing_index]
 display(testing_rows)
+
+
+
+//The training dataframe will further produce symptoms and diseases dataframes that will train the classifiers
+symptoms_train = training_rows.drop('Disease',axis=1)
+symptoms_train = symptoms_train.drop('Group ID',axis=1)
+display(symptoms_train)
+
+disease_train = training_rows['Disease']
+display(disease_train)
+
+
+//The testing dataframe will further produce symptoms and diseases dataframes that will test if the classifiers learnt the pattern
+symptoms_test = testing_rows.drop('Disease',axis=1)
+symptoms_test = symptoms_test.drop('Group ID',axis=1)
+display(symptoms_test)
+
+disease_test = testing_rows['Disease']
+display(disease_test)
+
 
 
