@@ -1,4 +1,4 @@
-# Disease Diagnosis System
+# Disease diagnostic support system
 This machine learning–based system diagnoses diseases from patient-reported symptoms, operating on a straightforward diagnostic paradigm: the patient provides a set of observed symptoms, and the system infers the most probable disease based on this input.
 
 ## Overview
