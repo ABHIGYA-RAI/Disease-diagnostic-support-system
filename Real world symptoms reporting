@@ -155,6 +155,19 @@ print(normalized_report)
 sentence = " ".join(normalized_report)
 print(sentence)
 
+
+
+#For assosciated phrases
+for dummy_symptom,phrase_list in symptom_phrases.items():
+  stemmed_phrase = [ ]
+  for phrase in phrase_list:
+    tokenized_phrase = word_tokenize(phrase)
+    for p in tokenized_phrase:
+      stemmed_p = stem_instance.stem(p)
+      stemmed_phrase.append(stemmed_p)
+  phrase_string = " ".join(stemmed_phrase)
+  print(phrase_string)
+  
   
 
 
