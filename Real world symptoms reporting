@@ -168,6 +168,11 @@ for dummy_symptom,phrase_list in symptom_phrases.items():
   phrase_string = " ".join(stemmed_phrase)
   print(phrase_string)
   
-  
+
+#Match user's report with assosciated phrases
+for dummy_symptom,phrase_list in symptom_phrases.items():
+  what_the_hell = any(phrase in sentence for phrase in phrase_list)
+  print(what_the_hell)
+
 
 
