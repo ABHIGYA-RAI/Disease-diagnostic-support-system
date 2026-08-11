@@ -140,39 +140,40 @@ symptom_phrases = {
     "yellow_crust_ooze": ["yellow crust oozing", "oozing yellow crust", "crusty yellow discharge on skin"],
 }
 
-#For user's report
+#User's report
 user_report = str(input("Report your symptoms please😊: "))
 tokenized_user_report = word_tokenize(user_report)
 stemmed_user_report = [ ]
+normalized_report = [ ]
 for word in tokenized_user_report:
   stemmed = stem_instance.stem(word)
   stemmed_user_report.append(stemmed)
-normalized_report = [ ]
 for w in stemmed_user_report:
   if(w not in punctuation_marks):
     normalized_report.append(w)
-print(normalized_report)
 sentence = " ".join(normalized_report)
 print(sentence)
 
 
 
-#For assosciated phrases
-for dummy_symptom,phrase_list in symptom_phrases.items():
-  stemmed_phrase = [ ]
-  for phrase in phrase_list:
-    tokenized_phrase = word_tokenize(phrase)
-    for p in tokenized_phrase:
-      stemmed_p = stem_instance.stem(p)
-      stemmed_phrase.append(stemmed_p)
-  phrase_string = " ".join(stemmed_phrase)
-  print(phrase_string)
+
   
 
-#Match user's report with assosciated phrases
 for dummy_symptom,phrase_list in symptom_phrases.items():
-  what_the_hell = any(phrase in sentence for phrase in phrase_list)
-  print(what_the_hell)
+  master_list = [ ]
+  for p in phrase_list:
+    dolce_gabbana = [ ]
+    tokenized_p = word_tokenize(p)
+    for t in tokenized_p:
+      stemmed_t = stem_instance.stem(t)
+      dolce_gabbana.append(stemmed_t)
+    rejoined_words = " ".join(dolce_gabbana)
+    master_list.append(rejoined_words)
+  what_the_hell = any(phrase in sentence for phrase in master_list)
+  if(what_the_hell is True):
+    print(f"{dummy_symptom} : {what_the_hell}")
 
 
+#what_the_hell will check if the user's string matches with the phrases; if they match, it will return True with the dummy symptom
+assosciated with the phrase.
 
