@@ -1,0 +1,12 @@
+'''This is how the phrases of the dummy symptoms tokenized,stemmed and rejoined back into phrases again'''
+
+for dummy_symptom,phrase_list in symptom_phrases.items():
+  if(dummy_symptom == "nodal_skin_eruptions"):
+     for p in phrase_list:
+      dolce_gabbana = [ ]
+      tokenized_p = word_tokenize(p)
+      for t in tokenized_p:
+        stemmed_t = stem_instance.stem(t)
+        dolce_gabbana.append(stemmed_t)
+        rejoined_words = " ".join(dolce_gabbana)
+      print(rejoined_words)
