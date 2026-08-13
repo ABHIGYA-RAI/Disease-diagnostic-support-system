@@ -159,6 +159,7 @@ print(sentence)
 
   
 
+
 for dummy_symptom,phrase_list in symptom_phrases.items():
   master_list = [ ]
   for p in phrase_list:
@@ -171,7 +172,11 @@ for dummy_symptom,phrase_list in symptom_phrases.items():
     master_list.append(rejoined_words)
   what_the_hell = any(phrase in sentence for phrase in master_list)
   if(what_the_hell is True):
-    print(f"{dummy_symptom} : {what_the_hell}")
+    print(f" {dummy_symptom} : {what_the_hell}")
+if(what_the_hell is False):
+  print("I'm sorry. I couldn't find your symptoms.😢")
+
+
 
 
 ''' what_the_hell will check if the user's string matches with the phrases; if they match, it will return True with the dummy symptom
