@@ -1,0 +1,38 @@
+These are the user reported symptoms which are mapped to their respective dummy symptoms.
+
+1. Report your symptoms please😊: My body aches a lot and I have high body temperature. My head hurts and I have lost my appetite.
+headache : True, muscle_pain : True
+
+2. Report your symptoms please😊: My scalp itches a lot and flaky dandruff are on my hair. There is an intense urge to scratch my head especially during night.
+itching : True
+
+3. Report your symptoms please😊: My stomach hurts a lot and I have been farting a lot.
+ stomach_pain : True
+ passage_of_gases : True
+
+4. Report your symptoms please😊: I sneeze a lot and my throat aches a lot.
+ continuous_sneezing : True
+
+5. Report your symptoms please😊: I have huge pimples on my jawline and cheeks. It is white and red in colour. It leaves scars too
+ scurving : True
+Here, scurving refers to scarring on skin
+
+6. Report your symptoms please😊: I have severe period cramps and I also bleed a lot.
+ cramps : True
+
+7. Report your symptoms please😊: I have loose stool and my stomach hurts a lot. I don't feel like eating and I want to throw up most of the time.
+ stomach_pain : True
+ vomiting : True
+ loss_of_appetite : True
+
+8. Report your symptoms please😊: I have blisters all over my back and I have a mild fever.
+ high_fever : True
+ mild_fever : True
+ blister : True
+
+9. Report your symptoms please😊: I cannot see far objects properly. My eyes tear up most of the times.
+I'm sorry. I couldn't find your symptoms.😢
+
+
+10. Report your symptoms please😊: I have not been able to poop for days and my mouth tastes bitter sometimes.
+I'm sorry. I couldn't find your symptoms.😢
