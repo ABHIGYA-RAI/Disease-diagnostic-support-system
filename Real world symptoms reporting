@@ -174,6 +174,9 @@ for dummy_symptom,phrase_list in symptom_phrases.items():
     print(f"{dummy_symptom} : {what_the_hell}")
 
 
-#what_the_hell will check if the user's string matches with the phrases; if they match, it will return True with the dummy symptom
+''' what_the_hell will check if the user's string matches with the phrases; if they match, it will return True with the dummy symptom
 assosciated with the phrase.
 
+The reason why the phrases are checked against the user's string but the user's string is not checked against the phrases inside of the
+master_list is because the whole string being compared to the phrases will never match and always returns False. But, the phrase extracted
+from the master_list and checked if it is present inside of the user's string will match and return True. ''' 
