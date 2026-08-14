@@ -23,6 +23,7 @@ indra_chowk = indra_chowk.fillna('0')
 indra_chowk = indra_chowk.astype(int)
 display(indra_chowk)
 
+'''indra_chowk is the entire encoded dataset'''
 
 
 itum_columns = indra_chowk.columns
@@ -34,3 +35,4 @@ print(whatever)
 itum_bahal = pd.DataFrame(data=0,index=[0],columns=whatever)
 display(itum_bahal)
 
+''' itum_bahal is the dataframe that contains the encoded user's symptoms.'''
