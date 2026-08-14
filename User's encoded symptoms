@@ -1,0 +1,36 @@
+symptoms_dataframe = data_set.drop('Disease',axis=1)
+
+#Start from here: Source of data
+stacked_list = [ ]
+symptoms_dataframe = symptoms_dataframe.fillna('None')
+for patient_rows in symptoms_dataframe.index:
+  for columns_name in symptoms_dataframe.columns:
+    cell_value = symptoms_dataframe.loc[patient_rows,columns_name]
+    cell_value = cell_value.strip()
+    if(cell_value != 'None'):
+      stacked_list.append((patient_rows,columns_name,cell_value))
+print(stacked_list)
+
+
+what = pd.DataFrame(stacked_list)
+display(what)
+
+what[3] = 1
+display(what)
+
+indra_chowk = pd.pivot_table(data=what,index=0,columns=2,values=3,aggfunc='mean')
+indra_chowk = indra_chowk.fillna('0')
+indra_chowk = indra_chowk.astype(int)
+display(indra_chowk)
+
+
+
+itum_columns = indra_chowk.columns
+whatever = [ ]
+for w in itum_columns:
+  whatever.append(w)
+print(whatever)
+
+itum_bahal = pd.DataFrame(data=0,index=[0],columns=whatever)
+display(itum_bahal)
+
