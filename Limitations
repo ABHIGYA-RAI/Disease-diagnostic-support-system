@@ -1,0 +1,9 @@
+The rule-based phrase matching, exact and loose, both have a hard ceiling. They both have limits because no distance between words or
+position of the words can convey the meaning of the phrases. 
+
+The distance threshold approach is unreliable because the phrases will vary for different symptoms; therefore it doesn't always mean that 
+two words closer to each other are correct but the words farther away are inccorect.
+
+This limitation can be fixed by integrating Large language model (LLM) as a replacement of the manually written lookup table. 
+Since LLMs already know what the sentence means and don't have to teach them what the phrases mean, they would be a smart tool to 
+be integrated into the system to take the user's reported symptoms and match it with the 131 dummy symptoms.
