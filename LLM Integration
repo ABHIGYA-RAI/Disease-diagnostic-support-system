@@ -9,3 +9,18 @@ Algorithm of configuring API Keys in Google Colab
 7. The API key name should be the same exact as in the code.
 8. Restart the session and rerun the entire notebook.
 9. The Python Script has now successfully connected to Gemini-3.5-Flash.
+
+
+Algorithm of connecting the Python Script with Gemini-3.5-Flash
+
+1. Import userdata library
+2. Import genai library
+3. Use userdata to get the API Key from Colab's Secrets using the label name.
+4. Hand over the API key using Client instance.
+
+
+from google import genai
+from google.colab import userdata
+api = userdata.get('GEMINI_API_KEY')
+client = genai.Client(api_key=api)
+print("You have successfully connected to Gemini-3.5-Flash!!!🥳🥳🥳\n You can enter your prompt now.😊😊\n If you want to exit the chat, write 'exit'. ")
