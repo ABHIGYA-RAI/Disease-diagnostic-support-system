@@ -31,6 +31,7 @@ This project takes a list of symptoms as input and predicts the most likely dise
 
 - **Model Training:** Google Colab, pandas, scikit-learn, XGBoost, CatBoost, LightGBM
 - **Deployment:** PyCharm, Streamlit
+- Large Language Model : Gemini-3.5-Flash
 
 
 The pipeline of this system is highlighted as:
