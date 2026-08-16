@@ -38,3 +38,9 @@ The pipeline of this system is highlighted as:
 Data Collection → Data Preprocessing → Feature Engineering → 
 Model Training -> Model evaluation → Model Deployment → Monitoring
 
+
+The integration of Large Language Model for matching the symptoms is given as : 
+
+<img width="2720" height="800" alt="prompt_to_symptom_flow" src="https://github.com/user-attachments/assets/b686cf4d-da72-4267-b680-16c378b95f38" />
+
+
