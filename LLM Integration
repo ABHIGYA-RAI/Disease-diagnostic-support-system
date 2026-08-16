@@ -1,4 +1,4 @@
-Algorithm of connecting the Colab Python script with the Gemini LLM:
+Algorithm of configuring API Keys in Google Colab
 
 1. Go to aistudio.google.com
 2. Create a new project.
