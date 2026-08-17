@@ -27,3 +27,13 @@ prompt = (
     "If none of the symptoms matched, just send me an empty list and also comment,'Sorry, your symptoms are out of the scope.😢' "
 
 )
+
+
+# Data Structure
+try:
+  response = client.models.generate_content(
+      model = 'gemini-3.5-flash',
+    contents = prompt)
+  print(f"Matching symptoms : {response.text}")
+except Exception as e:
+  print(f"Error: {e}")
