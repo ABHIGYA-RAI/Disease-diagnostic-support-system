@@ -1,0 +1,47 @@
+1. Report your symptoms:I feel dizzy. My head hurts a lot. I have imbalanced movement. Sometimes, I feel like throwing up.
+Gemini's response: 
+ Matching symptoms : dizziness, headache, loss_of_balance, nausea, vomiting
+
+2. Report your symptoms:My body aches a lot and I have high body temperature. My head hurts and I have lost my appetite.
+Gemini's response: 
+ Matching symptoms : muscle_pain, high_fever, headache, loss_of_appetite
+
+3. Report your symptoms:My stomach hurts a lot and I have been farting a lot.
+Gemini's response: 
+ Matching symptoms : stomach_pain, passage_of_gases
+
+4. Report your symptoms:I sneeze a lot and my throat aches a lot.
+Gemini's response: 
+ Matching symptoms : continuous_sneezing, throat_irritation
+
+5. Report your symptoms:I have huge pimples on my jawline and cheeks. They are red and white in color. They leave scars too.
+Gemini's response: 
+ Matching symptoms : pus_filled_pimples, scurring
+
+6. Report your symptoms:I have not been able to poop for days and my mouth tastes bitter sometimes.
+Gemini's response: 
+ Matching symptoms : constipation, acidity
+
+7. Report your symptoms:I have extremely painful period cramps and I bleed a lot.
+Gemini's response: 
+ Matching symptoms : abnormal_menstruation, cramps
+
+8. Report your symptoms:I cannot see far objects properly. My eyes tear up a lot.
+Gemini's response: 
+ Matching symptoms : blurred_and_distorted_vision, watering_from_eyes
+
+9. Report your symptoms:My hairline is receding in the form of an "M" shape. My hair is gradually thinning at the crown or top of the head. It is also thinning at the temples.
+Gemini's response: 
+ Matching symptoms : []
+
+Sorry, your symptoms are out of the scope.😢
+
+
+10. Report your symptoms:I cannot focus while studying for more than ten minutes. I cannot read past two pages. If I am about to do something, a thought pops up in my mind and I get distracted from my work.
+Gemini's response: 
+ Matching symptoms : lack_of_concentration
+
+
+So far, Gemini has been doing a brilliant work in matching the symptoms.
+
+
