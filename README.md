@@ -44,4 +44,8 @@ The integration of Large Language Model for matching the symptoms is given as :
 
 <img width="2720" height="800" alt="prompt_to_symptom_flow" src="https://github.com/user-attachments/assets/b686cf4d-da72-4267-b680-16c378b95f38" />
 
+The pipeline illustrates how the classifiers are configured to predict the target disease:
+
+<img width="1672" height="941" alt="ChatGPT Image Aug 18, 2026, 10_27_09 PM" src="https://github.com/user-attachments/assets/9e9bb731-3ad3-4dd4-b9f3-e65b56949ff1" />
+
 
