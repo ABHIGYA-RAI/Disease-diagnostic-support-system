@@ -37,3 +37,18 @@ try:
   print(f"Matching symptoms : {response.text}")
 except Exception as e:
   print(f"Error: {e}")
+
+
+itum_list = gemini_response.split(',')
+print(itum_list)
+
+itum_bahal_list = [ ]
+for s in itum_list:
+  s = s.strip()
+  itum_bahal_list.append(s)
+print(itum_bahal_list)
+
+
+for y in itum_bahal_list:
+  itum_bahal[y] = 1
+display(itum_bahal)
