@@ -21,3 +21,5 @@ classifier_dictionary = {
     "Bernoulli Naive Bayes" : BernoulliNB(),
      
 }
+
+#indra_chowk must have the Disease column to teach the classifiers what outcome it should be predicting.
