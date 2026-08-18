@@ -1,1 +1,23 @@
 
+!pip install catboost
+
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import BernoulliNB
+from catboost import CatBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
+from lightgbm import LGBMClassifier
+
+classifier_dictionary = {
+    "Support Vector Machine" : SVC(),
+    "K-Nearest Neighbor" : KNeighborsClassifier(),
+    "Logistic Regression" : LogisticRegression(),
+    "Gaussian Naive Bayes" : GaussianNB(),
+    "Multinomial Naive Bayes" : MultinomialNB(),
+    "Bernoulli Naive Bayes" : BernoulliNB(),
+     
+}
