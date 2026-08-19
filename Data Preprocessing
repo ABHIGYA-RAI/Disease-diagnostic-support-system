@@ -15,3 +15,7 @@ print(first_list)
 #Making the foundational data for the encoded dataframe
 stacked_dataframe = pd.DataFrame(first_list)
 display(stacked_dataframe)
+
+# A fourth column full of 1 is added as that '1' will be the cell value in the encoded dataframe
+stacked_dataframe[3] = 1
+display(stacked_dataframe)
