@@ -12,3 +12,6 @@ for row_index in symptoms_dataframe.index:
       first_list.append((row_index,column_name,cell_value))
 print(first_list)
 
+#Making the foundational data for the encoded dataframe
+stacked_dataframe = pd.DataFrame(first_list)
+display(stacked_dataframe)
