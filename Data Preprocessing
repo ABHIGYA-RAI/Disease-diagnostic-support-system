@@ -1,2 +1,14 @@
 The main aim of data preprocessing is to convert the original dataset into an encoded dataframe called indra_chowk.
 
+#Accessing each symptoms using their row index and column name:
+first_list = [ ]
+symptoms_dataframe = data_set.drop('Disease',axis=1)
+symptoms_dataframe = symptoms_dataframe.fillna('None')
+for row_index in symptoms_dataframe.index:
+  for column_name in symptoms_dataframe.columns:
+    cell_value = symptoms_dataframe.loc[row_index,column_name]
+    cell_value = cell_value.strip()
+    if(cell_value != 'None'):
+      first_list.append((row_index,column_name,cell_value))
+print(first_list)
+
