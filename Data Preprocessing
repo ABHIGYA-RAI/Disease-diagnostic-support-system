@@ -12,17 +12,23 @@ for row_index in symptoms_dataframe.index:
       first_list.append((row_index,column_name,cell_value))
 print(first_list)
 
-#Making the foundational data for the encoded dataframe
+#Making the foundational data for the encoded symptoms dataframe
 stacked_dataframe = pd.DataFrame(first_list)
 display(stacked_dataframe)
 
-# A fourth column full of 1 is added as that '1' will be the cell value in the encoded dataframe
+# A fourth column full of 1 is added as that '1' will be the cell value in the encoded symptoms dataframe
 stacked_dataframe[3] = 1
 display(stacked_dataframe)
 
 
-# pivot_table() is literally responsible for designing the encoded dataframe. It asks for the position of the columns in stacked_dataframe
+# pivot_table() is literally responsible for designing the encoded symptoms dataframe. It asks for the position of the columns in stacked_dataframe
 where the index, column names and values are stored. 
 
 # Surprisingly, the symptom columns are in alphabetical order.
+
+# The actual encoded symptoms dataframe
+indra_chowk = pd.pivot_table(data=stacked_dataframe,index=0,columns=2,values=3,aggfunc='mean')
+indra_chowk = indra_chowk.fillna('0')
+indra_chowk = indra_chowk.astype(int)
+display(indra_chowk)
 
