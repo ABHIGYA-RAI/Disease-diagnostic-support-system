@@ -42,3 +42,7 @@ series_disease = pd.Series(disease_encoding)
 print(series_disease)
 
 
+#The encoded diseases are finally attached with the encoded symptoms dataframe
+indra_chowk.insert(loc=0,column='Disease',value=series_disease)
+display(indra_chowk)
+
