@@ -49,3 +49,12 @@ display(indra_chowk)
 #This is the original dataset encoded into an encoded dataframe
 display(indra_chowk)
 
+
+# Making the symptoms list for solving data leakage problem
+leak_list = [ ]
+data_leak = indra_chowk.columns
+for element in data_leak:
+  leak_list.append(element)
+leak_list.remove('Disease')
+print(leak_list)
+
