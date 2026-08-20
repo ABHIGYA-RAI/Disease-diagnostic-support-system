@@ -63,3 +63,8 @@ print(leak_list)
 for encoded_disease,duplicate_row in indra_chowk.groupby(leak_list):
     display(duplicate_row)
 
+#Making the group ID to send a group of duplicate rows in either training data or testing data 
+groups = indra_chowk.groupby(leak_list)
+group_id = groups.ngroup()
+print(group_id)
+
