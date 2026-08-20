@@ -68,3 +68,9 @@ groups = indra_chowk.groupby(leak_list)
 group_id = groups.ngroup()
 print(group_id)
 
+#Assigning the Group ID to each row
+indra_chowk.insert(loc=1,column='Group ID',value=group_id)
+
+
+display(indra_chowk)
+
