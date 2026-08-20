@@ -58,3 +58,8 @@ for element in data_leak:
 leak_list.remove('Disease')
 print(leak_list)
 
+
+# These are the duplicate rows leaking into the testing data and hence causing overfitting
+for encoded_disease,duplicate_row in indra_chowk.groupby(leak_list):
+    display(duplicate_row)
+
