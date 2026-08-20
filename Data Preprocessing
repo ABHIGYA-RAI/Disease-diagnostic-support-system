@@ -32,3 +32,13 @@ indra_chowk = indra_chowk.fillna('0')
 indra_chowk = indra_chowk.astype(int)
 display(indra_chowk)
 
+
+
+#The diseases are one-hot encoded too and made into an encoded disease column
+from sklearn.preprocessing import LabelEncoder
+disease_encoder = LabelEncoder()
+disease_encoding = disease_encoder.fit_transform(data_set['Disease'])
+series_disease = pd.Series(disease_encoding)
+print(series_disease)
+
+
