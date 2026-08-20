@@ -46,3 +46,6 @@ print(series_disease)
 indra_chowk.insert(loc=0,column='Disease',value=series_disease)
 display(indra_chowk)
 
+#This is the original dataset encoded into an encoded dataframe
+display(indra_chowk)
+
