@@ -61,4 +61,39 @@ the encoded dataset. So, the testing data is basically useless in this case.
 # For a classifier running on patient reported symptoms, splitting is absolutely unnecessary. The encoded dataset becomes the training data 
 itself. The entire dataset trains the classifiers.
 
+!pip install catboost
+
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import BernoulliNB
+from catboost import CatBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
+from lightgbm import LGBMClassifier
+
+classifier_dictionary = {
+    "Support Vector Machine" : SVC(),
+    "K-Nearest Neighbor" : KNeighborsClassifier(),
+    "Logistic Regression" : LogisticRegression(),
+    "Gaussian Naive Bayes" : GaussianNB(),
+    "Multinomial Naive Bayes" : MultinomialNB(),
+    "Bernoulli Naive Bayes" : BernoulliNB(),
+    "Cat Boost" : CatBoostClassifier(),
+    "Random Forest" : RandomForestClassifier(),
+    "Ada Boost" : AdaBoostClassifier(),
+    "Light Boost" : LGBMClassifier()
+}
+
+
+# Categorizing the symptoms and diseases to train the classifiers
+symptom_feature = indra_chowk.drop('Disease',axis=1)
+disease_target = indra_chowk['Disease']
+
+
+for name_of_classifier,classifier in classifier_dictionary.items():
+  classifier.fit(symptom_feature,disease_target)
+  
 
