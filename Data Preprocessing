@@ -16,7 +16,8 @@ print(first_list)
 stacked_dataframe = pd.DataFrame(first_list)
 display(stacked_dataframe)
 
-# A fourth column full of 1 is added as that '1' will be the cell value in the encoded symptoms dataframe
+# A fourth column full of 1 is added as that '1' will be the cell value in the encoded symptoms dataframe.
+#This is where the real encoding happens
 stacked_dataframe[3] = 1
 display(stacked_dataframe)
 
@@ -27,7 +28,9 @@ where the index, column names and values are stored.
 # Surprisingly, the symptom columns are in alphabetical order.
 
 # The actual encoded symptoms dataframe
+#This is encoding 1
 indra_chowk = pd.pivot_table(data=stacked_dataframe,index=0,columns=2,values=3,aggfunc='mean')
+#This is encoding 0
 indra_chowk = indra_chowk.fillna('0')
 indra_chowk = indra_chowk.astype(int)
 display(indra_chowk)
