@@ -56,6 +56,9 @@ on the symptoms sent by Gemini-3.5-flash.
 
 #In the previous method, I had splitted on the basis of applying Group ID in order to avoid data leakage problem and used the testing data
 for the classifiers to diagnose on. But, in this case, the classifiers are diagnosing on real-world symptoms and not testing symptoms from 
-the encoded dataset. So, the testig data is basically useless in this case.
+the encoded dataset. So, the testing data is basically useless in this case.
+
+# For a classifier running on patient reported symptoms, splitting is absolutely unnecessary. The encoded dataset becomes the training data 
+itself. The entire dataset trains the classifiers.
 
 
