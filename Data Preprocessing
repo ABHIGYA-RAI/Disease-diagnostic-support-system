@@ -51,5 +51,8 @@ display(indra_chowk)
 
 #Now, indra_chowk is a fully fledged encoded dataset.
 
+#The whole point of designing this encoded dataset is so that it can provide training data which trains the classifiers to diagnose
+on the symptoms sent by Gemini-3.5-flash.
+
 
 
