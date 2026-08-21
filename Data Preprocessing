@@ -36,44 +36,20 @@ indra_chowk = indra_chowk.astype(int)
 display(indra_chowk)
 
 
-
-#The diseases are one-hot encoded too and made into an encoded disease column
+# Disease encoding
+disease = data_set['Disease']
 from sklearn.preprocessing import LabelEncoder
 disease_encoder = LabelEncoder()
-disease_encoding = disease_encoder.fit_transform(data_set['Disease'])
-series_disease = pd.Series(disease_encoding)
-print(series_disease)
+encoding_disease = disease_encoder.fit_transform(disease)
+encoded_disease = pd.Series(encoding_disease)
+display(encoded_disease)
 
 
-#The encoded diseases are finally attached with the encoded symptoms dataframe
-indra_chowk.insert(loc=0,column='Disease',value=series_disease)
+#Inserting the encoded disease column into the encoded symptoms dataframe, finally forming an encoded dataset
+indra_chowk.insert(loc=0,column='Disease',value=encoded_disease)
 display(indra_chowk)
 
-#This is the original dataset encoded into an encoded dataframe
-display(indra_chowk)
+#Now, indra_chowk is a fully fledged encoded dataset.
 
 
-# Making the symptoms list for solving data leakage problem
-leak_list = [ ]
-data_leak = indra_chowk.columns
-for element in data_leak:
-  leak_list.append(element)
-leak_list.remove('Disease')
-print(leak_list)
-
-
-# These are the duplicate rows leaking into the testing data and hence causing overfitting
-for encoded_disease,duplicate_row in indra_chowk.groupby(leak_list):
-    display(duplicate_row)
-
-#Making the group ID to send a group of duplicate rows in either training data or testing data 
-groups = indra_chowk.groupby(leak_list)
-group_id = groups.ngroup()
-print(group_id)
-
-#Assigning the Group ID to each row
-indra_chowk.insert(loc=1,column='Group ID',value=group_id)
-
-
-display(indra_chowk)
 
