@@ -95,5 +95,6 @@ disease_target = indra_chowk['Disease']
 
 for name_of_classifier,classifier in classifier_dictionary.items():
   classifier.fit(symptom_feature,disease_target)
-  
+
+# itum_bahal is not supposed to have diseases as it is only a row of dummy symptoms that carry the encoded patient reported symptoms.
 
