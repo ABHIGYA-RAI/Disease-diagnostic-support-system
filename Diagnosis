@@ -1,0 +1,6 @@
+# Each classifiers will be diagnosing on the user reported symptoms and their diagnosis will be decoded back into their original form.
+
+for name_of_classifier,classifier in classifier_dictionary.items():
+  diagnosis = classifier.predict(itum_bahal)
+  diagnosed_disease = disease_encoder.inverse_transform(diagnosis)
+  print(f"{name_of_classifier} : {diagnosed_disease}")
