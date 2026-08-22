@@ -4,3 +4,19 @@ for name_of_classifier,classifier in classifier_dictionary.items():
   diagnosis = classifier.predict(itum_bahal)
   diagnosed_disease = disease_encoder.inverse_transform(diagnosis)
   print(f"{name_of_classifier} : {diagnosed_disease}")
+
+
+1. Patient reported symptoms : I keep sneezing and my nose won't stop running. My throat feels scratchy too.
+Support Vector Machine : ['Allergy']
+K-Nearest Neighbor : ['Allergy']
+Logistic Regression : ['Allergy']
+Gaussian Naive Bayes : ['Allergy']
+Multinomial Naive Bayes : ['Common Cold']
+Bernoulli Naive Bayes : ['Allergy']
+Cat Boost : ['Allergy']
+Random Forest : ['Allergy']
+Ada Boost : ['(vertigo) Paroymsal  Positional Vertigo']
+Light Boost : ['Allergy']
+
+Allergy is reasonable as sneezing and runny nose are common symptoms of it. But, common cold is the perfect diagnosis which is surprisingly
+made by Multinomial Naive Bayes. AdaBoost is a degenerate so it will be removed from the dictionary.
