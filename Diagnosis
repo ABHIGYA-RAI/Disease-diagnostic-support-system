@@ -94,3 +94,36 @@ Bernoulli Naive Bayes : ['GERD']
 Random Forest : ['Bronchial Asthma']
 Light Boost : ['Bronchial Asthma']
 
+
+8. Patient reported symptoms : My eyes look yellow and my skin looks yellowish too.
+Support Vector Machine : ['Hepatitis C']
+K-Nearest Neighbor : ['Hepatitis C']
+Logistic Regression : ['Hepatitis C']
+Gaussian Naive Bayes : ['Hepatitis C']
+Multinomial Naive Bayes : ['Hepatitis C']
+Bernoulli Naive Bayes : ['Hepatitis C']
+Random Forest : ['Hepatitis C']
+Light Boost : ['Hepatitis C']
+
+9. Patient reported symptoms :I have no appetite and I have lost weight without trying
+Support Vector Machine : ['AIDS']
+K-Nearest Neighbor : ['Fungal infection']
+Logistic Regression : ['Hepatitis C']
+Gaussian Naive Bayes : ['Hepatitis C']
+Multinomial Naive Bayes : ['Tuberculosis']
+Bernoulli Naive Bayes : ['Hepatitis C']
+Random Forest : ['Jaundice']
+Light Boost : ['Urinary tract infection']
+
+This is just another case of needing probability assigned to each diseases and the patient reported symptoms being vague.
+
+10. Patient reported symptoms : My chest hurts and my heart feels like it's racing.
+Support Vector Machine : ['Heart attack']
+K-Nearest Neighbor : ['Heart attack']
+Logistic Regression : ['Heart attack']
+Gaussian Naive Bayes : ['Heart attack']
+Multinomial Naive Bayes : ['Pneumonia']
+Bernoulli Naive Bayes : ['Heart attack']
+Random Forest : ['Heart attack']
+Light Boost : ['Hypoglycemia']
+
