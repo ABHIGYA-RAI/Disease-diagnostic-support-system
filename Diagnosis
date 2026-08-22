@@ -37,3 +37,17 @@ Light Boost : ['AIDS']
 Allergy is the only unreasonable disease in here. The classifiers are not wrong for diagnosing AIDS or Malaria because fever and body ache 
 do fall in the category of symptoms of both diseases. The symptoms are just too generic and broad enough to cover multiple diseases, even
 common cold.
+
+3. Patient reported symptoms : My stomach has been hurting all day and I feel like throwing up.
+Support Vector Machine : ['Malaria']
+K-Nearest Neighbor : ['Malaria']
+Logistic Regression : ['Malaria']
+Gaussian Naive Bayes : ['Malaria']
+Multinomial Naive Bayes : ['Malaria']
+Bernoulli Naive Bayes : ['Malaria']
+Cat Boost : ['Malaria']
+Random Forest : ['Malaria']
+Light Boost : ['GERD']
+
+Malaria seems too far-fetched for these two simple symptoms. So, this ambiguousness can be fixed by applying probability of each disease 
+occuring instead of sticking to just one disease.
