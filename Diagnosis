@@ -20,3 +20,20 @@ Light Boost : ['Allergy']
 
 Allergy is reasonable as sneezing and runny nose are common symptoms of it. But, common cold is the perfect diagnosis which is surprisingly
 made by Multinomial Naive Bayes. AdaBoost is a degenerate so it will be removed from the dictionary.
+
+
+2. Patient reported symptoms : I have had a high fever since last night. My whole body aches.
+Support Vector Machine : ['AIDS']
+K-Nearest Neighbor : ['Allergy']
+Logistic Regression : ['AIDS']
+Gaussian Naive Bayes : ['Malaria']
+Multinomial Naive Bayes : ['Common Cold']
+Bernoulli Naive Bayes : ['AIDS']
+Cat Boost : ['Common Cold']
+Random Forest : ['Malaria']
+Light Boost : ['AIDS']
+
+
+Allergy is the only unreasonable disease in here. The classifiers are not wrong for diagnosing AIDS or Malaria because fever and body ache 
+do fall in the category of symptoms of both diseases. The symptoms are just too generic and broad enough to cover multiple diseases, even
+common cold.
