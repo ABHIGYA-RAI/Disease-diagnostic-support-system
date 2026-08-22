@@ -51,3 +51,16 @@ Light Boost : ['GERD']
 
 Malaria seems too far-fetched for these two simple symptoms. So, this ambiguousness can be fixed by applying probability of each disease 
 occuring instead of sticking to just one disease.
+
+
+4. Patient reported symptoms : My skin is really itchy and I have a rash spreading all over my arms.
+Support Vector Machine : ['Fungal infection']
+K-Nearest Neighbor : ['Fungal infection']
+Logistic Regression : ['Fungal infection']
+Gaussian Naive Bayes : ['Fungal infection']
+Multinomial Naive Bayes : ['Fungal infection']
+Bernoulli Naive Bayes : ['Fungal infection']
+Random Forest : ['Fungal infection']
+Light Boost : ['Fungal infection']
+
+
