@@ -64,3 +64,33 @@ Random Forest : ['Fungal infection']
 Light Boost : ['Fungal infection']
 
 
+5. Patient reported symptoms : I feel dizzy whenever I stand up and the room keeps spinning.
+Support Vector Machine : ['Fungal infection']
+K-Nearest Neighbor : ['Fungal infection']
+Logistic Regression : ['Fungal infection']
+Gaussian Naive Bayes : ['Fungal infection']
+Multinomial Naive Bayes : ['Fungal infection']
+Bernoulli Naive Bayes : ['Fungal infection']
+Random Forest : ['Fungal infection']
+Light Boost : ['(vertigo) Paroymsal  Positional Vertigo']
+
+6. Patient reported symptoms : My joints hurt specially my knees and I feel really weak.
+Support Vector Machine : ['Osteoarthritis']
+K-Nearest Neighbor : ['Osteoarthritis']
+Logistic Regression : ['Osteoarthritis']
+Gaussian Naive Bayes : ['Osteoarthritis']
+Multinomial Naive Bayes : ['Osteoarthritis']
+Bernoulli Naive Bayes : ['Osteoarthritis']
+Random Forest : ['Osteoarthritis']
+Light Boost : ['Osteoarthritis']
+
+7. Patient reported symptoms :  I have been coughing a lot and there's phlegm when I cough.
+Support Vector Machine : ['AIDS']
+K-Nearest Neighbor : ['Allergy']
+Logistic Regression : ['GERD']
+Gaussian Naive Bayes : ['GERD']
+Multinomial Naive Bayes : ['Pneumonia']
+Bernoulli Naive Bayes : ['GERD']
+Random Forest : ['Bronchial Asthma']
+Light Boost : ['Bronchial Asthma']
+
