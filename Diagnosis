@@ -148,3 +148,6 @@ classifier.classes_ : Encoded diseases(0-40)
 diagnosis = Probability
 
 The diagnosis is a 2D array therefore the flat 1D array should be extracted first and then only will the probabilities be extracted.
+
+Not only do the classifiers predict probabilities for all 41 diseases but also position them in the same order as their respective 
+encoded diseases. 
