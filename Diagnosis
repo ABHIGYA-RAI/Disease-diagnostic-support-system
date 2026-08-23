@@ -112,7 +112,7 @@ Logistic Regression : ['Hepatitis C']
 Gaussian Naive Bayes : ['Hepatitis C']
 Multinomial Naive Bayes : ['Tuberculosis']
 Bernoulli Naive Bayes : ['Hepatitis C']
-Random Forest : ['Jaundice']
+Random Forest : ['Jaundice'] 
 Light Boost : ['Urinary tract infection']
 
 This is just another case of needing probability assigned to each diseases and the patient reported symptoms being vague.
@@ -127,3 +127,7 @@ Bernoulli Naive Bayes : ['Heart attack']
 Random Forest : ['Heart attack']
 Light Boost : ['Hypoglycemia']
 
+
+
+Since a single label of disease given out as a diagnosis can be very misleading and cause a huge rate of misdiagnosis, there should be multiple diseases
+showcased to the patient with the probability of them occuring.
