@@ -151,3 +151,12 @@ The diagnosis is a 2D array therefore the flat 1D array should be extracted firs
 
 Not only do the classifiers predict probabilities for all 41 diseases but also position them in the same order as their respective 
 encoded diseases. 
+
+dancing = [ ]
+for name_of_classifier,classifier in classifier_dictionary.items():
+  diagnosis = classifier.predict_proba(itum_bahal)
+  disease_class = classifier.classes_
+  flattened_diagnosis = diagnosis[0]
+  for position in range(0,41):
+    dancing.append((int(disease_class[position]),float(flattened_diagnosis[position])))
+print(dancing)
