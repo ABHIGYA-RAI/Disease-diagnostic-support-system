@@ -131,3 +131,12 @@ Light Boost : ['Hypoglycemia']
 
 Since a single label of disease given out as a diagnosis can be very misleading and cause a huge rate of misdiagnosis, there should be multiple diseases
 showcased to the patient with the probability of them occuring.
+
+The probability will be paired with their respective encoded disease, the top 5 pairs will be extracted and the encoded diseases
+will be decoded back into their original string form. 
+
+Then the patient will see an output that looks something like this:
+
+Malaria : 70%
+AIDS : 20%
+Other diseases : 10%
