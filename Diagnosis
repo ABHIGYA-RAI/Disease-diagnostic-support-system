@@ -166,3 +166,27 @@ This is the (disease,probability) pair.
 
 
 This is the representation of how confident is the model in each disease.
+
+How is the disease in alignment with their respective probability?
+The encoded disease is equal to the position of its respective probability in the probability array. That probability is the highest among
+other probabilities and that is how you know it is the probability of the sungle diagnosed encoded disease.
+
+for name_of_classifier,classifier in classifier_dictionary.items():
+  birami = classifier.predict(itum_bahal)
+  sambhawana = classifier.predict_proba(itum_bahal)
+  print(birami)
+  print(sambhawana)
+[7]
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[7]
+[[0.01453647 0.04954791 0.04499518 0.0166268  0.05555146 0.03139044
+  0.02047134 0.17620116 0.00616762 0.00929262 0.00579956 0.01431195
+  0.01272268 0.03527154 0.02445927 0.04289923 0.01900639 0.04337175
+  0.03815649 0.00767427 0.02137438 0.00495164 0.00409706 0.01827526
+  0.01010038 0.00711108 0.00972214 0.02628964 0.00879841 0.00716714
+  0.01418312 0.02125168 0.03860888 0.02034729 0.00827675 0.02206385
+  0.0038511  0.00557339 0.05260345 0.02100326 0.00589597]]
+[7]
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
