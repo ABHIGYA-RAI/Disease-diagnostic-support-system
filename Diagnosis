@@ -201,3 +201,16 @@ Light Boost : [(0, 0.022832657614947013), (1, 0.028126451267081815), (2, 0.02771
 
 This is the diseases with their probability of occuring which has been diagnosed by each classifiers.
 
+for name_of_classifier, classifier in classifier_dictionary.items():
+  just_do_it = [ ]
+  diagnosis = classifier.predict_proba(itum_bahal)
+  class_disease = classifier.classes_
+  actual_diagnosis = diagnosis[0]
+  for i in range(0,41):
+    pair = (int(class_disease[i]),float(actual_diagnosis[i]))
+    just_do_it.append(pair)
+    just_do_it.sort(key=lambda pair:pair[1],reverse=True)
+  print(f"{name_of_classifier} : {just_do_it}")
+
+
+The pair of disease and their probabilities have been sorted on the basis of the highest probability to the lowest probability.
