@@ -277,3 +277,7 @@ for name_of_classifier,classifier in classifier_dictionary.items():
 [('Fungal infection', 0.37), ('Drug Reaction', 0.15), ('Chronic cholestasis', 0.08), ('Gastroenteritis', 0.05), ('AIDS', 0.04)]
 [('Fungal infection', 0.0483581252771401), ('Drug Reaction', 0.04433393027712846), ('Jaundice', 0.033556289079097884), ('Urinary tract infection', 0.029123542656635564), ('Dimorphic hemmorhoids(piles)', 0.028783498093758544)]
 
+
+All of the seven classifiers are diagnosing Fungal Infection as the most probable disease for the symptom reported by the patient : itching
+This proves that the models aren't diagnosing something too far-fetched.
+
