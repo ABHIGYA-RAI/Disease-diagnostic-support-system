@@ -218,3 +218,23 @@ Random Forest : [(7, 0.72), (31, 0.09), (38, 0.04), (4, 0.03), (13, 0.03)]
 Light Boost : [(7, 0.9998556678390503), (31, 1.1526915295909553e-05), (38, 4.425406518078203e-06), (13, 4.373649475587065e-06), (12, 4.321340939006642e-06)]
 
 
+Extracting only the top five encoded diseases 
+for name_of_classifier,classifier in classifier_dictionary.items():
+  pair_list = [ ]
+  top_five_list = [ ]
+  disease_and_probability = [ ]
+  twod_probability = classifier.predict_proba(itum_bahal)
+  encoded_disease_list = classifier.classes_
+  probability_list = twod_probability[0]
+  for position in range(0,41):
+    pair = (int(encoded_disease_list[position]),float(probability_list[position]))
+    pair_list.append(pair)
+    pair_list.sort(key = lambda pair: pair[1],reverse=True)
+  disease_array = [ ]
+  for sets in pair_list[0:5]:
+    extracted_disease = sets[0]
+    extracted_probability = sets[1]
+    disease_array.append(extracted_disease)
+  print(disease_array)
+
+
