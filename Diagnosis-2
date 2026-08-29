@@ -1,2 +1,5 @@
 To prevent any ridiculous disease being diagnosed and ridiculous probability assigned, the patient should report as many symptoms 
 that they actually have.
+
+Set a probability threshold. If the probability is 4%, instead of showing 4% chance of Fungal Infection and making the patient even 
+more confused, the patient should report more symptoms. If the diagnosis made is still ridiculous, discard the classifier.
