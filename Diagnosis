@@ -281,3 +281,4 @@ for name_of_classifier,classifier in classifier_dictionary.items():
 All of the seven classifiers are diagnosing Fungal Infection as the most probable disease for the symptom reported by the patient : itching
 This proves that the models aren't diagnosing something too far-fetched.
 
+Now I will have to multiply the probabilities by 100 to get the percentage of probabilities.
