@@ -238,3 +238,42 @@ for name_of_classifier,classifier in classifier_dictionary.items():
   print(disease_array)
 
 
+
+
+
+
+
+
+
+The decoded diseases are now paired up with the top five highest probabilities.
+
+for name_of_classifier,classifier in classifier_dictionary.items():
+  pair_list = [ ]
+  top_five_list = [ ]
+  disease_and_probability = [ ]
+  twod_probability = classifier.predict_proba(itum_bahal)
+  encoded_disease_list = classifier.classes_
+  probability_list = twod_probability[0]
+  for position in range(0,41):
+    pair = (int(encoded_disease_list[position]),float(probability_list[position]))
+    pair_list.append(pair)
+    pair_list.sort(key = lambda pair: pair[1],reverse=True)
+  disease_array = [ ]
+  for sets in pair_list[0:5]:
+    extracted_disease = sets[0]
+    extracted_probability = sets[1]
+    disease_array.append(extracted_disease)
+    real_disease = disease_encoder.inverse_transform(disease_array)
+    for element in real_disease:
+      second_pair = (element,extracted_probability)
+    disease_and_probability.append(second_pair)
+  print(disease_and_probability)
+
+[('Fungal infection', 1.0), ('(vertigo) Paroymsal  Positional Vertigo', 0.0), ('AIDS', 0.0), ('Acne', 0.0), ('Alcoholic hepatitis', 0.0)]
+[('Fungal infection', 0.2270816395178811), ('Drug Reaction', 0.10738108184545295), ('Chronic cholestasis', 0.06562766476412107), ('Allergy', 0.04186285504000875), ('AIDS', 0.03543671095622576)]
+[('Fungal infection', 0.9999991894961668), ('Drug Reaction', 8.105038881974616e-07), ('Chronic cholestasis', 1.6870661335512795e-31), ('Jaundice', 8.947804754012262e-40), ('(vertigo) Paroymsal  Positional Vertigo', 0.0)]
+[('Fungal infection', 0.2433906992041235), ('Drug Reaction', 0.21354777309461584), ('Chronic cholestasis', 0.15562092829392354), ('Jaundice', 0.13861154591088676), ('Chicken pox', 0.10348736033289543)]
+[('Fungal infection', 0.8948401633030094), ('Drug Reaction', 0.10143195421472438), ('Allergy', 0.0008820169931715187), ('Acne', 0.0004749322270923556), ('AIDS', 0.00047493222709235394)]
+[('Fungal infection', 0.37), ('Drug Reaction', 0.15), ('Chronic cholestasis', 0.08), ('Gastroenteritis', 0.05), ('AIDS', 0.04)]
+[('Fungal infection', 0.0483581252771401), ('Drug Reaction', 0.04433393027712846), ('Jaundice', 0.033556289079097884), ('Urinary tract infection', 0.029123542656635564), ('Dimorphic hemmorhoids(piles)', 0.028783498093758544)]
+
