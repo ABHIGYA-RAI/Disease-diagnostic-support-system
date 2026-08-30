@@ -27,3 +27,38 @@ for name_of_classifier, classifier in classifier_dictionary.items():
     do_one_percent_daily.append(ghumna_jane_ho)
   please = do_one_percent_daily[0]
   print(please[1])
+
+
+
+
+If the highest probability given out by a classifier satisfies the probability threshold, then only that classifier's diagnosed diseases will be
+shown to the patients. Otherwise, they will be reported as inconclusive to prevent misinformation and confusion. 
+
+for name_of_classifier, classifier in classifier_dictionary.items():
+  probability_threshold = 40
+  just_do_it = [ ]
+  do_one_percent_daily = [ ]
+  diagnosis = classifier.predict_proba(itum_bahal)
+  class_disease = classifier.classes_
+  actual_diagnosis = diagnosis[0]
+  for i in range(0,41):
+    pair = (int(class_disease[i]),float(actual_diagnosis[i]))
+    just_do_it.append(pair)
+    just_do_it.sort(key=lambda pair:pair[1],reverse=True)
+  for sets in just_do_it[0:5]:
+    disease_array = [ ]
+    same_probability_list = [ ]
+    disease_array.append(sets[0])
+    back_to_disease = disease_encoder.inverse_transform(disease_array)
+    get_the_disease = back_to_disease[0]
+    same_probability = sets[1]*100
+    ghumna_jane_ho = (get_the_disease,same_probability)
+    do_one_percent_daily.append(ghumna_jane_ho)
+  please = do_one_percent_daily[0]
+  highest = please[1]
+  if(highest == probability_threshold or highest > probability_threshold):
+    print(do_one_percent_daily)
+  elif(highest < probability_threshold):
+    print("Inconclusive")
+
+  
