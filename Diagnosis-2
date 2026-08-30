@@ -3,3 +3,27 @@ that they actually have.
 
 Set a probability threshold. If the probability is 4%, instead of showing 4% chance of Fungal Infection and making the patient even 
 more confused, the patient should report more symptoms. If the diagnosis made is still ridiculous, discard the classifier.
+
+
+These are the highest probabilities diagnosed by all classifiers.
+for name_of_classifier, classifier in classifier_dictionary.items():
+  just_do_it = [ ]
+  do_one_percent_daily = [ ]
+  diagnosis = classifier.predict_proba(itum_bahal)
+  class_disease = classifier.classes_
+  actual_diagnosis = diagnosis[0]
+  for i in range(0,41):
+    pair = (int(class_disease[i]),float(actual_diagnosis[i]))
+    just_do_it.append(pair)
+    just_do_it.sort(key=lambda pair:pair[1],reverse=True)
+  for sets in just_do_it[0:5]:
+    disease_array = [ ]
+    same_probability_list = [ ]
+    disease_array.append(sets[0])
+    back_to_disease = disease_encoder.inverse_transform(disease_array)
+    get_the_disease = back_to_disease[0]
+    same_probability = sets[1]*100
+    ghumna_jane_ho = (get_the_disease,same_probability)
+    do_one_percent_daily.append(ghumna_jane_ho)
+  please = do_one_percent_daily[0]
+  print(please[1])
