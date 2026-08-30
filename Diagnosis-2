@@ -63,6 +63,7 @@ for name_of_classifier, classifier in classifier_dictionary.items():
 
   
 Phrasing the diagnosis to make it user-friendly
+
 for name_of_classifier, classifier in classifier_dictionary.items():
   probability_threshold = 40
   just_do_it = [ ]
@@ -92,7 +93,7 @@ for name_of_classifier, classifier in classifier_dictionary.items():
       sambhawana = position[1]
       feri = f"{sambhawana}% probability of {rog}"
       feri_arko_list.append(feri)
-    print(feri_arko_list)
+    print(f"You have {feri_arko_list[0]},{feri_arko_list[1]},{feri_arko_list[2]},{feri_arko_list[3]},{feri_arko_list[4]}")
 
 
   elif(highest < probability_threshold):
