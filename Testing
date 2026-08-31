@@ -6,3 +6,6 @@
 - Run each trained classifier's `.predict()` on the 131-column features — no `.fit()`, since you're only testing.
 - Compare predictions against the encoded true labels using accuracy/precision/recall/F1, same as before.
 - This score is your external, leakage-free evaluation — compare it against your original Kaggle test-split scores to see how much performance drops on genuinely unseen data.
+
+
+Load the SymbiPredict testing dataset the same way as the Kaggle training dataset.
