@@ -9,3 +9,5 @@
 
 
 Load the SymbiPredict testing dataset the same way as the Kaggle training dataset.
+
+The testing dataset has the same exact 131 symptoms as the training dataset. 
