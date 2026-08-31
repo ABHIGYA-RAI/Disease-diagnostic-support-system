@@ -1,0 +1,8 @@
+- Load SymbiPredict as its own dataframe, separate from your Kaggle data.
+- Drop `fluid_overload.1` (the duplicate column) — keep the original `fluid_overload`.
+- Select your 131 symptom columns from SymbiPredict, in the *same order* as your training columns — this becomes your external test features.
+- Take SymbiPredict's `prognosis` column as the true disease labels — this becomes your external test labels.
+- Encode those disease labels using your *existing* `disease_encoder` (not a new one) — so the numbers match what your classifiers already learned. If SymbiPredict has disease names your encoder has never seen, those rows can't be scored and should be set aside.
+- Run each trained classifier's `.predict()` on the 131-column features — no `.fit()`, since you're only testing.
+- Compare predictions against the encoded true labels using accuracy/precision/recall/F1, same as before.
+- This score is your external, leakage-free evaluation — compare it against your original Kaggle test-split scores to see how much performance drops on genuinely unseen data.
