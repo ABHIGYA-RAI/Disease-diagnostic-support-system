@@ -25,3 +25,15 @@
 **Didn't match:** just one — `fluid_overload.1`, a duplicate column in SymbiPredict (pandas auto-renamed a repeated `fluid_overload` header). Not a real mismatch — it's the same symptom appearing twice in SymbiPredict's own columns.
 
 **Bottom line:** SymbiPredict is a clean superset of your 131 symptoms — no alignment work needed on the symptom side. You can drop `fluid_overload.1` (or merge it into `fluid_overload`) and select your 131 columns directly by name.
+
+
+
+
+#Read 3 
+Confirmed — verified against the actual raw column list, not just my first pass. 133 total columns in SymbiPredict: 131 real symptom names matching Kaggle exactly (whitespace included, like `'dischromic _patches'` and `'foul_smell_of urine'` — literally identical strings), plus `'prognosis'` (the label column) and `'fluid_overload.1'` (a duplicate pandas created because `fluid_overload` appears twice in the source file). So yes — all 131 Kaggle symptoms are present, unmodified, in SymbiPredict.
+
+
+#Read 4 (Abhigya this is the first step to breaking off a bad habit and trampoline jumping to break free from it)
+Yeah, kind of a lucky break — after all the whitespace/naming mismatches you fought through earlier (`dischromic _patches`, `foul_smell_of urine`, `list_symptoms` vs `.strip()`), this dataset happens to use the *exact* same column names, spacing quirks included. No alignment work needed — straight into building the test set.
+
+
