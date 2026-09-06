@@ -14,3 +14,14 @@
 - Run `classifier.predict(...)` on these SymbiPredict rows — no `.fit()` call, since you're only testing, not retraining.
 - Compare each prediction against SymbiPredict's own true disease label for that row.
 - Compute accuracy/precision/recall/F1 on these predictions vs. SymbiPredict's true labels — this score tells you how well your Kaggle-trained model performs on data it's never seen from a completely different source.
+
+
+
+
+
+#Read 2
+**Matched: 131 out of 131.** Every Kaggle symptom exists in SymbiPredict (whitespace-stripped, since Kaggle's `dischromic _patches`/`foul_smell_of urine` have the same stray-space quirks you dealt with earlier — SymbiPredict's versions match once trimmed).
+
+**Didn't match:** just one — `fluid_overload.1`, a duplicate column in SymbiPredict (pandas auto-renamed a repeated `fluid_overload` header). Not a real mismatch — it's the same symptom appearing twice in SymbiPredict's own columns.
+
+**Bottom line:** SymbiPredict is a clean superset of your 131 symptoms — no alignment work needed on the symptom side. You can drop `fluid_overload.1` (or merge it into `fluid_overload`) and select your 131 columns directly by name.
