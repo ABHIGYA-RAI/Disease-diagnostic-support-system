@@ -1,3 +1,16 @@
 1. The SymbiPredict dataset is to be loaded seperately with its own symptoms columns and lables of diseases.
 2. Match the symptoms names in SymbiPredict with the 131 symptom column names in the training dataframe.
 3. All symptom columns of the testing dataset matches the training dataset--congratulations to me on that. 🥳🥳🥳🥳
+
+
+
+
+
+#Read 1
+- The classifiers are already trained on your Kaggle-based `symptoms_feature`/`disease_target` — that training doesn't change.
+- Load SymbiPredict separately — it's a different set of patient rows with its own symptom columns and disease labels.
+- Match SymbiPredict's symptom column names to your 131 training column names (same alignment problem you had with `list_user_input` vs `df.columns` early on) — keep only the overlapping symptoms, drop the rest.
+- Build SymbiPredict rows in your exact 131-column order (same shape your classifiers expect), filling 0 wherever a symptom isn't present or doesn't exist in your column set.
+- Run `classifier.predict(...)` on these SymbiPredict rows — no `.fit()` call, since you're only testing, not retraining.
+- Compare each prediction against SymbiPredict's own true disease label for that row.
+- Compute accuracy/precision/recall/F1 on these predictions vs. SymbiPredict's true labels — this score tells you how well your Kaggle-trained model performs on data it's never seen from a completely different source.
