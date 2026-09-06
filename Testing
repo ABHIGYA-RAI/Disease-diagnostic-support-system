@@ -50,3 +50,21 @@ Good sign — means the external evaluation is basically ready to run: pull Symb
 - Run each trained classifier's `.predict()` on the 131-column features — no `.fit()`, since you're only testing.
 - Compare predictions against the encoded true labels using accuracy/precision/recall/F1, same as before.
 - This score is your external, leakage-free evaluation — compare it against your original Kaggle test-split scores to see how much performance drops on genuinely unseen data.
+
+
+
+
+# ghumna jaam
+Load SymbiPredict
+Independent patient dataset
+Align columns
+Select the 131 matching symptoms
+Extract true labels
+prognosis column per row
+Encode labels
+Reuse the existing disease encoder
+Predict, no retrain
+Run the already-trained classifiers
+Score results
+Compare against the true labels
+teal = pipeline steps · amber = the external evaluation score
