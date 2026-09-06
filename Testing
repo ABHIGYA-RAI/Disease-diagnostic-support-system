@@ -37,3 +37,6 @@ Confirmed — verified against the actual raw column list, not just my first pas
 Yeah, kind of a lucky break — after all the whitespace/naming mismatches you fought through earlier (`dischromic _patches`, `foul_smell_of urine`, `list_symptoms` vs `.strip()`), this dataset happens to use the *exact* same column names, spacing quirks included. No alignment work needed — straight into building the test set.
 
 
+#Read 4
+Good sign — means the external evaluation is basically ready to run: pull SymbiPredict's `prognosis` column as the true label, select your 131 matching columns as features, run your trained classifiers on it directly, and compare.
+
