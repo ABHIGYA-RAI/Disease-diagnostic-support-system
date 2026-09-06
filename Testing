@@ -1,1 +1,2 @@
-The SymbiPredict dataset is to be loaded seperately with its own symptoms columns and lables of diseases.
+1. The SymbiPredict dataset is to be loaded seperately with its own symptoms columns and lables of diseases.
+2. Match the symptoms names in SymbiPredict with the 131 symptom column names in the training dataframe.
