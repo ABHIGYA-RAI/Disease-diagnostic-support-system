@@ -68,3 +68,9 @@ Run the already-trained classifiers
 Score results
 Compare against the true labels
 teal = pipeline steps · amber = the external evaluation score
+
+
+
+#bruhh
+The poor classifiers are to be tested on all thousands of different patients reported symptoms, not one manual symptoms sentence like I 
+thought would be enough to assess the robots.
