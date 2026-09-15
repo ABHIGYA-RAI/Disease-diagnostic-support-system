@@ -19,3 +19,7 @@ print(matched_list)
 print(unmatched_list)
 
 Each and every 131 symptoms of SymbiPredict matched with that of indra_chowk.
+
+#The coolest way of rearranging the columns of a dataset. I'm thouroughly impressed.
+wow = symbi_predict[training_list]
+display(wow)
