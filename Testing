@@ -2,3 +2,20 @@ The SymbiPredict dataset had two fluid_overload columns, one had all zeros and t
 dropped.
 
 The full encoded dataframe is indra_chowk whose 131 symptoms will be compared with that of the SymbiPredict dataset.
+
+
+matched_list = [ ]
+unmatched_list = [ ]
+training_list = list(indra_chowk.columns)
+training_list.remove('Disease')
+testing_list = list(symbi_predict.columns)
+testing_list.remove('prognosis')
+for e in testing_list:
+  if(e in training_list):
+    matched_list.append(e)
+  elif(e not in training_list):
+    unmatched_list.append(e)
+print(matched_list)
+print(unmatched_list)
+
+Each and every 131 symptoms of SymbiPredict matched with that of indra_chowk.
