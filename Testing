@@ -1,0 +1,4 @@
+The SymbiPredict dataset had two fluid_overload columns, one had all zeros and the other had the actual data. The one with only zeros have been
+dropped.
+
+The full encoded dataframe is indra_chowk whose 131 symptoms will be compared with that of the SymbiPredict dataset.
