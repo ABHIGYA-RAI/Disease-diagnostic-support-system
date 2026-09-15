@@ -23,3 +23,29 @@ Each and every 131 symptoms of SymbiPredict matched with that of indra_chowk.
 #The coolest way of rearranging the columns of a dataset. I'm thouroughly impressed.
 wow = symbi_predict[training_list]
 display(wow)
+
+#The differences between the training diseases and testing diseases
+print(disease_encoder.classes_)
+print(symbi_predict['prognosis'].unique())
+
+['(vertigo) Paroymsal  Positional Vertigo' 'AIDS' 'Acne'
+ 'Alcoholic hepatitis' 'Allergy' 'Arthritis' 'Bronchial Asthma'
+ 'Cervical spondylosis' 'Chicken pox' 'Chronic cholestasis' 'Common Cold'
+ 'Dengue' 'Diabetes ' 'Dimorphic hemmorhoids(piles)' 'Drug Reaction'
+ 'Fungal infection' 'GERD' 'Gastroenteritis' 'Heart attack' 'Hepatitis B'
+ 'Hepatitis C' 'Hepatitis D' 'Hepatitis E' 'Hypertension '
+ 'Hyperthyroidism' 'Hypoglycemia' 'Hypothyroidism' 'Impetigo' 'Jaundice'
+ 'Malaria' 'Migraine' 'Osteoarthristis' 'Paralysis (brain hemorrhage)'
+ 'Peptic ulcer diseae' 'Pneumonia' 'Psoriasis' 'Tuberculosis' 'Typhoid'
+ 'Urinary tract infection' 'Varicose veins' 'hepatitis A']
+['Fungal Infection' 'Allergy' 'GERD' 'Chronic Cholestasis' 'Drug Reaction'
+ 'Peptic Ulcer Disease' 'AIDS' 'Diabetes ' 'Gastroenteritis'
+ 'Bronchial Asthma' 'Hypertension ' 'Migraine' 'Cervical Spondylosis'
+ 'Paralysis (brain hemorrhage)' 'Jaundice' 'Malaria' 'Chickenpox' 'Dengue'
+ 'Typhoid' 'Hepatitis A' 'Hepatitis B' 'Hepatitis C' 'Hepatitis D'
+ 'Hepatitis E' 'Alcoholic Hepatitis' 'Tuberculosis' 'Common Cold'
+ 'Pneumonia' 'Dimorphic Hemmorhoids (piles)' 'Heart Attack'
+ 'Varicose Veins' 'Hypothyroidism' 'Hyperthyroidism' 'Hypoglycemia'
+ 'Osteoarthritis' 'Arthritis' 'Vertigo' 'Acne' 'Urinary Tract Infection'
+ 'Psoriasis' 'Impetigo']
+
