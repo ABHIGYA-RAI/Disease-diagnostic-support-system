@@ -63,5 +63,17 @@ encoded_symbi_disease = pd.Series(encoding_symbi)
 display(encoded_symbi_disease)
 
 
- 
+for name_of_classifier,classifier in classifier_dictionary.items():
+  real_test = classifier.predict(wow)
+  print(f"{name_of_classifier} : {real_test}")
 
+K-Nearest Neighbor : [15 15 15 ... 38 35 27]
+Logistic Regression : [15 15 15 ... 38 35 27]
+Gaussian Naive Bayes : [15 15 15 ... 38 35 27]
+Multinomial Naive Bayes : [15 15 15 ... 38 35 27]
+Bernoulli Naive Bayes : [15 15 15 ... 38 35 27]
+Random Forest : [15 15 15 ... 38 35 27]
+Light Boost : [15 15 15 ... 38 35 27]
+
+
+The issue is to be blamed on the SymbiDisease or the classifiers overfitting, this is to be discovered.
