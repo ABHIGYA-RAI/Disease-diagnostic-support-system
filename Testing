@@ -49,3 +49,14 @@ print(symbi_predict['prognosis'].unique())
  'Osteoarthritis' 'Arthritis' 'Vertigo' 'Acne' 'Urinary Tract Infection'
  'Psoriasis' 'Impetigo']
 
+
+# Matching the Symbi diseases with the indra diseases
+just_checking = symbi_predict['prognosis']
+just_checking = just_checking.replace(disease_rename_map)
+display(just_checking)
+
+
+
+
+ 
+
