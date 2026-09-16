@@ -55,6 +55,8 @@ just_checking = symbi_predict['prognosis']
 just_checking = just_checking.replace(disease_rename_map)
 display(just_checking)
 
+The SymbiDisease are now to be encoded by the same disease_encoder that had been used to encode indra disease.
+
 
 
 
