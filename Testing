@@ -57,7 +57,10 @@ display(just_checking)
 
 The SymbiDisease are now to be encoded by the same disease_encoder that had been used to encode indra disease.
 
-
+#SymbiDisease has now been encoded the same as indra disease
+encoding_symbi = disease_encoder.transform(just_checking)
+encoded_symbi_disease = pd.Series(encoding_symbi)
+display(encoded_symbi_disease)
 
 
  
