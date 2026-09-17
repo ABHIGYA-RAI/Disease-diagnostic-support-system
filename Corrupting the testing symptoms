@@ -6,3 +6,18 @@ This corrupted symptoms will clearly distinguish between the machines who just m
 learned the symptoms -> disease patterns.
 
 The corruption leads to flipping off random cells of 0 into 1 and 1 into 0.
+
+
+import numpy as np
+from sklearn.metrics import accuracy_score
+def corrupt(df, flip_frac=0.15, seed=42):
+    rng = np.random.default_rng(seed)
+    mask = rng.random(df.shape) < flip_frac
+    return df ^ mask.astype(int)
+
+X_test_noisy = corrupt(wow)
+
+for name, model in classifier_dictionary.items():
+    acc_clean = accuracy_score(encoded_symbi_disease, model.predict(wow))
+    acc_noisy = accuracy_score(encoded_symbi_disease, model.predict(X_test_noisy))
+    print(name, acc_clean, acc_noisy, acc_clean - acc_noisy)
