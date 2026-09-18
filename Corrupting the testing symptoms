@@ -105,3 +105,8 @@ The corruption test is a legitimate way of seeing which machine would tolerate r
 The ensembles showed their competence by breaking down at even a slight unfamiliarity from the symptoms they had memorized.
 But, Bernoulli/KNN/LogReg consistently proved to be able to handle any level of noise.
 
+It seems like the machine to be pushed into production has been selected. And it is :
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+BERNOULLI NAIVE BAYES 🤯🤯🤯🤯
