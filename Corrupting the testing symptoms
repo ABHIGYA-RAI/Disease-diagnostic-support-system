@@ -93,4 +93,5 @@ Random Forest            0.9921  0.9135  0.6567  0.4485
 Observation : Be it at the lowest noise level (2%) or highest noise level (15%), Bernoulli and KNN didn't drop their accuracy below 90%.
 But LightBoost started getting worse at only 5% noise level.
 
-
+Conclusion : The ensemble and booster never learned the symptoms -> disease relationships, they just memorized the training patterns. 
+They overfitted hard for this specific dataset whereas the others generalized.
