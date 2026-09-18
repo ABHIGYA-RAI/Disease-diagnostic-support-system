@@ -48,9 +48,49 @@ The classifiers with the highest accuracy drop are interestingly Random Forest (
 
 Completely contradicting my expectation, the ensemble and boosters underperformed whereas a Naive Bayes outperformed them.
 
-  
 
+
+In the previous case, the classifiers were tested at a single noise level. This didn't bring justice to ensemble and boosters. 
+Therefore, they will be re-tested again using four differen noise levels.
+Lower noise levels : 2% and 5%; they have only 2 to 7 of cells flipped in a row full of 131 cells.
+Higher noise levels : 10% and 15%; they have about 13 to 20 cells flipped per row.
+The lower noise levels also reflect the real world patient forgetting to report some symptoms.
+
+import numpy as np
+import pandas as pd
+
+def corrupt(df, flip_frac=0.15, seed=42):
+    rng = np.random.default_rng(seed)
+    mask = rng.random(df.shape) < flip_frac
+    return df ^ mask.astype(int)
+
+results = []
+for frac in [0.02, 0.05, 0.10, 0.15]:
+    X_test_noisy = corrupt(wow, flip_frac=frac)
+    for name, model in classifier_dictionary.items():
+        acc = accuracy_score(encoded_symbi_disease, model.predict(X_test_noisy))
+        results.append({"flip_frac": frac, "model": name, "accuracy": round(acc, 4)})
+
+results_df = pd.DataFrame(results)
+pivot = results_df.pivot(index="model", columns="flip_frac", values="accuracy")
+print(pivot)
+
+////////////////////////////////////////////////////////
+
+flip_frac                  0.02    0.05    0.10    0.15
+model                                                  
+Bernoulli Naive Bayes    0.9998  0.9938  0.9682  0.9065
+Gaussian Naive Bayes     0.9996  0.9913  0.9514  0.8611
+K-Nearest Neighbor       0.9996  0.9944  0.9688  0.9047
+Light Boost              0.9214  0.7986  0.5918  0.4350
+Logistic Regression      0.9996  0.9927  0.9645  0.8970
+Multinomial Naive Bayes  0.9972  0.9901  0.9641  0.8520
+Random Forest            0.9921  0.9135  0.6567  0.4485
     
-  
+/////////////////////////////////////////////////////////
+
+
+Observation : Be it at the lowest noise level (2%) or highest noise level (15%), Bernoulli and KNN didn't drop their accuracy below 90%.
+But LightBoost started getting worse at only 5% noise level.
 
 
