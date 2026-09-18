@@ -9,7 +9,7 @@ The corruption leads to flipping off random cells of 0 into 1 and 1 into 0.
 
 
 
-#Corrupting the testing symptoms and comparing the drop in accuracy
+# Corrupting the testing symptoms and comparing the drop in accuracy
 import numpy as np
 from sklearn.metrics import accuracy_score
 def corrupt(df, flip_frac=0.15, seed=42):
@@ -41,7 +41,13 @@ ranjana_lipi = pd.DataFrame(comparison_dictionary)
 ranjana_lipi = ranjana_lipi.sort_values(by="Accuracy difference",ascending=True)
 display(ranjana_lipi)
 
- https://colab.research.google.com/drive/1bHlAvY18zjuY_3UAEkrbgWgWWpV-AqlF#scrollTo=ICDUWKcCq1py&fullscreenOutput=true
+Surprisingly, the classifiers with the least accuracy drop is Bernoulli Naive Bayes with accuracy difference of only 0.093 and K-Nearest
+Neighbor with accuracy difference of only 0.095. 
+
+The classifiers with the highest accuracy drop are interestingly Random Forest (0.55) and LightBoost (0.56).
+
+Completely contradicting my expectation, the ensemble and boosters underperformed whereas a Naive Bayes outperformed them.
+
   
 
     
