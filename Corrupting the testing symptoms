@@ -95,3 +95,13 @@ But LightBoost started getting worse at only 5% noise level.
 
 Conclusion : The ensemble and booster never learned the symptoms -> disease relationships, they just memorized the training patterns. 
 They overfitted hard for this specific dataset whereas the others generalized.
+
+
+The Bernoulli and KNN might "win" in this specific synthetic dataset but if I have to push it into production and deploy it to real-world
+end users, maybe the ensembles will win this time as they are literally built to handle the complex real world data?
+
+The answer is No. The ensembles will win in handling real-world patient data if and if only they were trained on such messy, unseen data.
+The corruption test is a legitimate way of seeing which machine would tolerate real world messiness better.
+The ensembles showed their competence by breaking down at even a slight unfamiliarity from the symptoms they had memorized.
+But, Bernoulli/KNN/LogReg consistently proved to be able to handle any level of noise.
+
