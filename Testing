@@ -87,3 +87,19 @@ Therefore, this is not a bug to be debugged but a synthetic dataset issue.
 Due to the dataset not being evaluating enough, I will have to manually flip the 0 into 1 and 1 into 0 to impersonate the testing dataset
 as a real-world noisy data. In this way, the machines would finally be evaluated on unseen data and the one which deserves to be deployed
 will be clearly identified.
+
+
+def corrupt(df, flip_frac=0.15, seed=42):
+    rng = np.random.default_rng(seed)
+    mask = rng.random(df.shape) < flip_frac
+    return df ^ mask.astype(int)
+
+corrupt() takes the dataframe to be corrupted which is df = wow(the testing symptoms dataframe). Only 15% of the cells will have their 
+values flipped. Random seed is to be fixed for reproducibility which means every machine should get the same corrupted testing
+symptoms for every corrupt() call. ALL cells of the original symptoms dataframe will be assigned a decimal between 0 and 1. 
+The cells with decimal below 0.15 will be assigned True whereas the rest of them will be assigned False. This is the hard setting of
+boundary to ensure that only 15% of the dataframe will have its cell values flipped. Then the True will be masked to 1 and False into 0.
+The cell with 1 will have their original flipped and the cell with 0 will get to keep their original value as it is.
+
+This is how the corruption of testing symptoms take place.
+
