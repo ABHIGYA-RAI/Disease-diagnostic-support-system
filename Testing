@@ -103,3 +103,20 @@ The cell with 1 will have their original flipped and the cell with 0 will get to
 
 This is how the corruption of testing symptoms take place.
 
+        Name of classifier  ...  Difference in accuracy
+0       K-Nearest Neighbor  ...                0.100383
+4    Bernoulli Naive Bayes  ...                0.103205
+1      Logistic Regression  ...                0.112074
+2     Gaussian Naive Bayes  ...                0.135053
+3  Multinomial Naive Bayes  ...                0.157630
+5            Random Forest  ...                0.560774
+6              Light Boost  ...                0.574884
+
+[7 rows x 4 columns]
+
+
+KNN and Bernoulli are still perfroming well on unseen data even when the seed has been changed whereas Light and Forest are 
+underwhelmingly performing and crashing hard on unseen data.
+
+
+
