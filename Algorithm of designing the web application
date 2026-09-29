@@ -1,0 +1,3 @@
+1. A folder called DiseaseDiagnosisApp is made.
+2. Inside that folder opened in PyCharm, a file called Home.py is made.
+3. The very first thing to install in PyCharm would be Streamlit.
