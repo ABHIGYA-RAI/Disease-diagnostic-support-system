@@ -23,3 +23,52 @@ classifier_dictionary = {
 }
 
 #indra_chowk must have the Disease column to teach the classifiers what outcome it should be predicting.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+for name_of_classifier, classifier in classifier_dictionary.items():
+  probability_threshold = 40
+  just_do_it = [ ]
+  do_one_percent_daily = [ ]
+  diagnosis = classifier.predict_proba(itum_bahal)
+  class_disease = classifier.classes_
+  actual_diagnosis = diagnosis[0]
+  for i in range(0,41):
+    pair = (int(class_disease[i]),float(actual_diagnosis[i]))
+    just_do_it.append(pair)
+    just_do_it.sort(key=lambda pair:pair[1],reverse=True)
+  for sets in just_do_it[0:5]:
+    disease_array = [ ]
+    same_probability_list = [ ]
+    disease_array.append(sets[0])
+    back_to_disease = disease_encoder.inverse_transform(disease_array)
+    get_the_disease = back_to_disease[0]
+    same_probability = sets[1]*100
+    ghumna_jane_ho = (get_the_disease,same_probability)
+    do_one_percent_daily.append(ghumna_jane_ho)
+  please = do_one_percent_daily[0]
+  highest = please[1]
+  if(highest > probability_threshold or highest == probability_threshold):
+    feri_arko_list = [ ]
+    for position in do_one_percent_daily:
+      rog = position[0]
+      sambhawana = position[1]
+      feri = f"{sambhawana}% probability of {rog}"
+      feri_arko_list.append(feri)
+    print(f"You have {feri_arko_list[0]},{feri_arko_list[1]},{feri_arko_list[2]},{feri_arko_list[3]},{feri_arko_list[4]}")
+
+
+  elif(highest < probability_threshold):
+    print("Inconclusive")
+
+//
+1. probability_threshold does not allow the diseases that have probability less than 40% to be displayed to the patient to prevent 
+unnecessary confusion.
+
+2. diagnosis is the 2D 41 probabilities laid out.
+3. class_disease is the 41 encoded diseases.
+4. actual_diagnosis is the 1D array that actually allows to access the probabilities.
+5. pair = (encoded disease, respective probability)
+6. just_do_it has 41 pairs and the pairs are sorted in descending order so that the pair with the biggest probability is 
+kept at first.
+7. sets are the pairs with biggest probabilities with their respective diseases.
