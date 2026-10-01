@@ -14,3 +14,9 @@ for the user to choose from.
 Gemini API's job to extract the keywords from the user reported sentences.
 
 4. Therefore, the only feasible user input format is the sentence in a text box.
+
+
+The machines will be deployable after an ensemble is formed and after they go throught the phase of feature engineering, hyperparameter
+tuning and optimization. Until then, a web page will be made for the user to write their symptoms. Next, a result page will be made
+that displays the diseases diagnosed by the current machines.
+
