@@ -72,3 +72,12 @@ unnecessary confusion.
 6. just_do_it has 41 pairs and the pairs are sorted in descending order so that the pair with the biggest probability is 
 kept at first.
 7. sets are the pairs with biggest probabilities with their respective diseases.
+
+
+///////////////////
+OBSERVATIONS : 
+1. KNN always claims falsely and fully a single disease with 100% confidence score. KNN and Bernoulli are not performing as well as they
+were during symbi predict dataset testing.
+
+2. Medical ambiguity is a reoccuring case, therefore, in the input box page, the users should be requested to check each and every symtpoms
+that they have in order to prevent medical ambiguity and false predictions.
