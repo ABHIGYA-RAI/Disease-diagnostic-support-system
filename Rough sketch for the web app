@@ -20,3 +20,9 @@ The machines will be deployable after an ensemble is formed and after they go th
 tuning and optimization. Until then, a web page will be made for the user to write their symptoms. Next, a result page will be made
 that displays the diseases diagnosed by the current machines.
 
+The code in any pages inside this web app folder are not meant to be executed by running their files.
+In fact, none of the files are supposed to be run. The pages will be displayed in the web app by running simply one command:
+
+py -m streamlit run Home.py
+
+The Home file launches the whole app. 
