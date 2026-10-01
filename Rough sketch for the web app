@@ -1,0 +1,16 @@
+The medical ambiguity is the leading cause of false predictions. To reduce such ambiguousness, the users should be hyper specific about
+their symptoms instead of reporting generic symptoms like fever, vomiting and coughing. They should also report each and every symtpoms
+that they have. 
+
+///////////////////////////////////////
+How should the user input page be formatted?
+1. Checkboxes and radio buttons are not feasible as designing 131 symptoms is a huge hassle and the users will have to scan through
+each boxes to get their symptoms. The options will also be limiting and restricting for the users as there may not be the symptom
+for the user to choose from. 
+
+2. Dropdown boxes are not feasible for multiple symptoms.
+
+3. Symptoms reported in the form of keywords is unrealistic as no layperson gives their symptoms in terms. Also, it is 
+Gemini API's job to extract the keywords from the user reported sentences.
+
+4. Therefore, the only feasible user input format is the sentence in a text box.
