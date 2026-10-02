@@ -26,3 +26,10 @@ In fact, none of the files are supposed to be run. The pages will be displayed i
 py -m streamlit run Home.py
 
 The Home file launches the whole app. 
+
+
+
+
+How does Windows Command Prompt know to execute the code in PyCharm?
+: Because the code in Pycharm is inside the files of 'DiseaseDiagnosisApp' project folder and this folder is also in Downloads.
+The files are accessed through Home.py.
