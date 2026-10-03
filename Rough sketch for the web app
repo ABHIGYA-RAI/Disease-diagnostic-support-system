@@ -33,3 +33,13 @@ The Home file launches the whole app.
 How does Windows Command Prompt know to execute the code in PyCharm?
 : Because the code in Pycharm is inside the files of 'DiseaseDiagnosisApp' project folder and this folder is also in Downloads.
 The files are accessed through Home.py.
+
+
+
+
+//Must-knows regarding the project:
+1. The project is stored in the folder called "DiseaseDiagnosisApp".
+2. There is a file called "Home.py" that is the only file needed to be ran to launch the whole web app.
+3. A directory called pages/ stores all of the files.
+4. The directory must be named "pages/" as Streamlit only recognizes a multiple page web app if it is named so.
+5. PyCharm is the IDE for the frontend; also known as User Interface/ User Experience.
