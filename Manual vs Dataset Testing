@@ -1,0 +1,22 @@
+Dataset testing evaluated and tested the algorithms
+based on the condition of how they can learn patterns
+from noisy and messy real world data. It had shown that
+KNN and Bernoulli were able to learn the patterns well.
+
+Manual testing pointed out the biggest issue prevalent
+in real world symptoms reporting: symptoms ambiguousness.
+And it had shown that LR, Multinomial, Gaussian and Light
+could handle such ambiguousness better.
+
+Now, it's whose word over whose. It is manual testing's
+word over dataset testing's word because the former
+actually evaluates the algorithms on the issue
+that is more relevant in my case.
+
+For deployment, it doesn't matter how well the algorithms
+can learn the patterns. The only thing that matters is
+how will they handle the symptoms ambiguousness;
+which is the most relevant issue.
+
+So, in favour of manual testing, the LR, Multinomial,
+Gaussian and LightGBM will be ensembled.
