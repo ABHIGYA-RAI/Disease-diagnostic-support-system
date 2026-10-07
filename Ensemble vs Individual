@@ -1,0 +1,120 @@
+1. Sustained high fever, weakness, abdominal pain, loss of appetite, constipation, headache
+: Typhoid
+
+Bernoulli gave only 0.01% probability for Typhoid.
+Whereas, the ensembles gave 30.44% for Typhoid, the highest probability.
+
+
+2. High fever, severe joint pain, rash, pain behind the eyes, fatigue, nausea
+: Dengue
+
+The ensembles heavily favoured Dengue with 81.18% and gave rest of the diseases 1%/2% only.
+KNN had given 100% to Impetigo and Bernoulli had given only 21% to Dengue.
+
+3. Yellowing of skin, yellowing of eyes, dark urine, fatigue, loss of appetite, nausea
+: Jaundice
+
+The ensemble has given 71.49% to Hepatitis D and 23.36% to Hepatitis C.
+KNN and Bernoulli also had favoured Hepatitis D and other liver related diseases a lot.
+This is not an algorithm failure as Jaundice is not a separate disease in itself but is a symptom of Hepatitis.
+So, this is a flaw in symptoms labeling in the dataset and the algorithms are not wrong for picking Hepatitis.
+
+4. Excessive thirst, frequent urination, fatigue, blurred vision, unexplained weight loss, slow-healing wounds
+: Diabetes
+
+The ensembles gave 59.36% to Diabetes. KNN and Bernoulli also had strongly
+favoured Diabetes.
+
+5. Throbbing headache, sensitivity to light, nausea, visual disturbances, dizziness
+: Migraine
+
+The ensembles gave Hypertension as 43.63% and Migraine as 28.00%.
+In individual algorithms, all of them had favoured Hypertension the most.
+Migraine and Hypertension are related very closely so it is not far-fetched.
+This is exactly where the probability ranking becomes useful.
+[MEDICAL AMBIGUITY]
+
+6. Cough with phlegm, chest pain, fever, breathlessness, fatigue, rapid breathing
+: Pneumonia
+
+The individual algorithms had strongly favored Bronchial Asthma.
+The ensembles gave:
+Bronchial Asthma :  30.83%
+Heart attack :  27.49%
+Pneumonia :  26.42%
+
+This is again a data problem where the symptoms of Bronchial Asthma and Pneumonia are encoded similarly.
+Both the ensembles AND individual algorithms pointing to Bronchial Asthma is not a algorithm fault.
+[MEDICAL AMBIGUITY]
+
+7.Itchy red rash, fluid-filled blisters, fever, fatigue, loss of appetite
+: Chicken Pox
+
+Another miss due to [MEDICAL AMBIGUITY].
+fluid-filled blisters didn't get collapsed into rash but it did into "blisters" so Gemini symptom extraction isn't at fault either.
+This is just another case of symptom overlap as blisters belongs to both chicken pox and Impetigo.
+
+8. Burning urination, frequent urge to urinate, cloudy urine, lower abdominal pain, mild fever
+: Urinary Tract Infection
+
+The ensembles gave 76.07% to Urinary Tract infection whereas the individuals were also strongly suggesting Urinary Tract Infection.
+This shows how well the algorithms work if the symptoms are hyper specific.
+
+9. Heartburn, acid regurgitation, chest discomfort, bloating, difficulty swallowing
+: GERD (Acid Reflux)
+
+50.25% to GERD by the ensembles and also by the individuals. Just shows how important the hyper specific symptoms are.
+
+10. Joint pain, joint stiffness (worse in morning), swelling in joints, reduced range of motion, fatigue
+: Arthritis
+
+Individuals had given Arthritis due to the specificness of the symptoms and ensembles have given Arthritis a probability of 71.20% and osteoarthritis 11.28%.
+
+11. Wheezing, shortness of breath, chest tightness, coughing, difficulty breathing at night
+: Bronchial Asthma
+
+Bronchial Asthma has the least probability whereas Heart attack has 63.75%.
+This is another case of [MEDICAL AMBIGUITY] that has more misleading impact as the actual disease is assigned the least possibility whereas the totally unrelated disease is given the biggest probability.
+
+12. High fever, headache, chills, sweating, nausea, muscle pain
+: Malaria
+
+Malaria has 98.89% given by the ensemble.
+
+////////////////////////////////////////////////
+
+CONCLUSION :
+
+The entire blame to be placed on the algorithm is
+completely wrong when they should be placed the least
+amount of blame out of all factors.
+
+The dominant faulty parties are:
+1. 0/1 encoding of symptoms
+2. Inevitable overlapping of symptoms
+3. Non inclusive of distinguishing clinical factors like: severity, duration and context
+
+The input is solely based on the presence or absence
+of symptoms, completely ignoring the very clinical factors that
+are used by physicians to clarify ambiguousness.
+
+The input doesn't care about how long the symptoms have persisted,
+if the disease had happened in the past and how severe the symptoms are.
+It only says, "You have Symptom X so you have Disease X."
+
+In real medicine, symptoms WILL be common among multiple diseases
+so this ambiguousness is inevitable.
+
+With this many flaws in the input, the algorithms
+are destined to give wrong predictions. The poor algorithms
+will obviously give out from what they're fed on.
+
+So, the diagnosing of disease while giving in the input
+on the basis of presence/absence of symptoms, no distinguishing
+clinical factors and overlapping symptoms, will make even the most
+"perfect" and "sophisticated" algorithm give out
+incorrect predictions.
+
+
+
+
