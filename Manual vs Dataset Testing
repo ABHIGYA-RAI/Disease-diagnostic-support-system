@@ -20,3 +20,8 @@ which is the most relevant issue.
 
 So, in favour of manual testing, the LR, Multinomial,
 Gaussian and LightGBM will be ensembled.
+
+
+
+A proper evaluation of manual testing results and the dataset testing results(at a single corrupted rate vs multiple corrupted rate)
+are to be done. This will give full confidence in which estimators to select to form an ensemble for deployment.
