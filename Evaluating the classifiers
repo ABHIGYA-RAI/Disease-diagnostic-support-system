@@ -11,3 +11,25 @@ The machines who did not regress as soon as the data
 got tricky and new are Bernoulli Naive Bayes (surprisingly)
 and K-Nearest Neighbor.
 
+Finding the single flip fraction to be rigid and unfair,
+I tried out fractions lesser than 15% so as to give the
+underperforming machines a sense of justice.
+
+Random forest stayed in the range of 0.90 when the data
+was corrupted only by 2% and 5%. But as soon as the data
+was corrupted by 10% and 15%, it degraded hard.
+
+LightBoost did even worse than the ensemble.
+
+flip_frac              0.02     0.05     0.10    0.15
+Logistic Regression	: 0.9996	0.9927	0.9645	0.8970
+
+The average LR kept 0.9 in all corrupted levels.
+Gaussian Naive Bayes did the same too.
+Multinomial isn't bad either.
+
+Bernoulli and KNN kept all of their accuracies strictly
+at 0.90.
+
+Conclusion : Bernoulli and KNN are the winners of
+dataset testing.
