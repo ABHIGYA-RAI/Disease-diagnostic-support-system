@@ -1,0 +1,5 @@
+LightGBM and Random Forest have the highest accuracy
+difference between the clean symptoms accuracy and
+corrupted symptoms accuracy. This means that they
+don't perform well on data that is different from the
+one that they were trained on.
