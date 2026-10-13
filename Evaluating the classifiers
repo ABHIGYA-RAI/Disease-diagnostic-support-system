@@ -3,3 +3,11 @@ difference between the clean symptoms accuracy and
 corrupted symptoms accuracy. This means that they
 don't perform well on data that is different from the
 one that they were trained on.
+
+The averages are : Logistic Regression, Multinomial
+Naive Bayes and Gaussian Naive Bayes.
+
+The machines who did not regress as soon as the data
+got tricky and new are Bernoulli Naive Bayes (surprisingly)
+and K-Nearest Neighbor.
+
