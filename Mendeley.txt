@@ -1,0 +1,6 @@
+Mendeley has 773 diseases whereas 377 symptoms. The reason why the symptoms are so much lesser than the diseases is because the symptoms makes 
+different combinations in huge number which will be for many different diseases. This proves that in medicine, symptoms of different diseases do
+overlap with each other. So, the symptom overlap case that happened during SymbiPredict dataset testing and manual testing is neither the user's fault
+nor the algorithm's. This is genuinely how symptoms work. 
+
+The origin is pointing to RAG_LLM repository and this is why Mendeley.txt keeps going there.
