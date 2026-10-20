@@ -4,3 +4,7 @@ overlap with each other. So, the symptom overlap case that happened during Symbi
 nor the algorithm's. This is genuinely how symptoms work. 
 
 The origin is pointing to RAG_LLM repository and this is why Mendeley.txt keeps going there.
+
+The actual folder that actually pushes each new updates into the repository is Downloads/DiseaseDiagnosisApp folder.
+
+So, I will have to name this file Downloads/DiseaseDiagnosisApp/Mendeley.txt
