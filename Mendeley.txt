@@ -14,3 +14,9 @@ I had changed the file path of DiseaseDiagnosis.ipynb and that is why the Mendel
 21 diseases have been found to be common in Mendeley and Kaggle. But Malaria, Diabetes and Tuberculosis have the lowest repeated occurences so if I use them for testing, the scores given out by the algorithms will be unfair.
 
 So, removing the three diseases, only the 18 diseases will be used for testing.
+
+counting is a Series where the actual values are the counts whereas the diseases are only the index so counting >=30 is checking only the counts.
+
+kha_kha will probably be the actual testing dataset.
+
+Therefore, the new testing dataset will have 18 diseases and 12722 rows.
