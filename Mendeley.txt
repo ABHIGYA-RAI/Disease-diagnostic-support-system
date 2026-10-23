@@ -7,4 +7,10 @@ The origin is pointing to RAG_LLM repository and this is why Mendeley.txt keeps 
 
 The actual folder that actually pushes each new updates into the repository is Downloads/DiseaseDiagnosisApp folder.
 
-So, I will have to name this file Downloads/DiseaseDiagnosisApp/Mendeley.txt
+So, I will have to name this file Downloads/DiseaseDiagnosisApp/Mendeley.txt.
+
+I had changed the file path of DiseaseDiagnosis.ipynb and that is why the Mendeley.csv disappeared from that notebook. Due to Kernel being different as it remained the same as the one it was during the first launch of the notebook, after changing file path, it couldn't see the Mendeley dataset.
+
+21 diseases have been found to be common in Mendeley and Kaggle. But Malaria, Diabetes and Tuberculosis have the lowest repeated occurences so if I use them for testing, the scores given out by the algorithms will be unfair.
+
+So, removing the three diseases, only the 18 diseases will be used for testing.
