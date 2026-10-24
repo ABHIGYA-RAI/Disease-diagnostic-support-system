@@ -20,3 +20,12 @@ counting is a Series where the actual values are the counts whereas the diseases
 kha_kha will probably be the actual testing dataset.
 
 Therefore, the new testing dataset will have 18 diseases and 12722 rows.
+
+
+Now, for the testing symptoms, the Mendeley symptoms should be fitted and matched with Kaggle's because the algorithms only knows the Kaggle's symptoms.
+
+I have to remove the three diseases with the least rows because if I didn't, the final scores from the test will be untrue and unfair.
+
+Lesser the amount of rows, more chances of hit-or-miss which will swing the final score.
+
+Kepeing a threshold of 100, only the diseases that has rows more than 100 will be kept for testing. 
