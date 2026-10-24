@@ -28,4 +28,12 @@ I have to remove the three diseases with the least rows because if I didn't, the
 
 Lesser the amount of rows, more chances of hit-or-miss which will swing the final score.
 
-Kepeing a threshold of 100, only the diseases that has rows more than 100 will be kept for testing. 
+Keeping a threshold of 100, only the diseases that has rows more than 100 will be kept for testing. 
+
+occurences is the Series which has diseases as the index and counts as the values.
+
+occurences.values > 100; then only; occurences.index -> keep = [occurences.index]
+
+Therefore, new_mendeley will be the dataset that has the diseases ready for testing.
+
+
