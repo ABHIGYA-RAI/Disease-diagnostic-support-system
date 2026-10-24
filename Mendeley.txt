@@ -1,4 +1,4 @@
-Mendeley has 773 diseases whereas 377 symptoms. The reason why the symptoms are so much lesser than the diseases is because the symptoms makes 
+Mendeley has 773 diseases and 377 symptoms. The reason why the symptoms are so much lesser than the diseases is because the symptoms makes 
 different combinations in huge number which will be for many different diseases. This proves that in medicine, symptoms of different diseases do
 overlap with each other. So, the symptom overlap case that happened during SymbiPredict dataset testing and manual testing is neither the user's fault
 nor the algorithm's. This is genuinely how symptoms work. 
@@ -37,3 +37,4 @@ occurences.values > 100; then only; occurences.index -> keep = [occurences.index
 Therefore, new_mendeley will be the dataset that has the diseases ready for testing.
 
 
+Apparently, the 22 symptoms have the same wording in both Kaggle and Mendeley.
