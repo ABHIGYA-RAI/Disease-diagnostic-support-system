@@ -49,3 +49,4 @@ Step-by-step method of creating the testing dataset:
 
 2. Gemini API key should be stored as a secret key and should not in any way be revealed in public.
 
+3. Two lists of possibly the Kaggle symptoms and Mendeley symptoms should be built.
