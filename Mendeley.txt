@@ -53,3 +53,6 @@ Step-by-step method of creating the testing dataset:
 
 4. The two lists will be given to Gemini.
 
+5. The mapped symptoms must be manually checked at last.
+
+6. The 131 symptoms table will finally be built for testing.
