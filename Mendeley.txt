@@ -44,3 +44,5 @@ Now, the rest of the symptoms of Kaggle will be matched with the diseases of Men
 The traditional Natural Language Processing method is too lengthy, time-consuming and also inefficient so integrating an LLM removes the disadvantages of using 
 manual NLP.
 
+Step-by-step method of creating the testing dataset:
+1. The Gemini LLM should be installed.
