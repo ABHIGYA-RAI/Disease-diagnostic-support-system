@@ -46,3 +46,6 @@ manual NLP.
 
 Step-by-step method of creating the testing dataset:
 1. The Gemini LLM should be installed.
+
+2. Gemini API key should be stored as a secret key and should not in any way be revealed in public.
+
