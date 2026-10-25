@@ -37,4 +37,10 @@ occurences.values > 100; then only; occurences.index -> keep = [occurences.index
 Therefore, new_mendeley will be the dataset that has the diseases ready for testing.
 
 
-Apparently, the 22 symptoms have the same wording in both Kaggle and Mendeley.
+The 22 symptoms have the same wording in both Kaggle and Mendeley.
+
+Now, the rest of the symptoms of Kaggle will be matched with the diseases of Mendeley using Gemini Large Language Model (LLM).
+
+The traditional Natural Language Processing method is too lengthy, time-consuming and also inefficient so integrating an LLM removes the disadvantages of using 
+manual NLP.
+
