@@ -62,3 +62,8 @@ Step-by-step method of creating the testing dataset:
 How to integrate Gemini LLM into Jupyter Notebook?
 
 1. Install the google-genai library for Gemini. 
+
+2. Go to Google AI studio, create an API key and copy the API key.
+
+3. Remember not to push the API key containing file into Github or make the keys be in public view.
+
