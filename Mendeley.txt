@@ -67,3 +67,4 @@ How to integrate Gemini LLM into Jupyter Notebook?
 
 3. Remember not to push the API key containing file into Github or make the keys be in public view.
 
+4. Store the API key in a file that is in the same folder as the notebook. 
