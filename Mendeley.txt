@@ -56,3 +56,9 @@ Step-by-step method of creating the testing dataset:
 5. The mapped symptoms must be manually checked at last.
 
 6. The 131 symptoms table will finally be built for testing.
+
+
+
+How to integrate Gemini LLM into Jupyter Notebook?
+
+1. Install the google-genai library for Gemini. 
