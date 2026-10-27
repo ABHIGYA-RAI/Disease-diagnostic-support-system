@@ -76,3 +76,5 @@ The reason why the API key was being invalid is because it was stored in "" when
 Gemini LLM will map the Kaggle symptoms and Mendeley symptoms by matching exact same symptoms that are worded differently.
 
 Then, a table of 131 symptoms will be made and encoded following the Mendeley dataset. 
+
+The algorithms will be tested on the table and their accuracy, precision, AUC-ROC and recall will be measured.
