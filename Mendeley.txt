@@ -73,6 +73,7 @@ How to integrate Gemini LLM into Jupyter Notebook?
 
 load_dotenv() kept coming False because it nevere received the API key file. So, pass the path to that file and if it gives True, it means it got the API key.
 
+To save new API key, load_dotenv(override=True) otherwise it will just load the previous key.
 
 
 
