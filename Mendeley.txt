@@ -69,12 +69,12 @@ How to integrate Gemini LLM into Jupyter Notebook?
 
 4. Store the API key in a file that is in the same folder as the notebook. 
 
-For some reason, the API key is being invalid.
 
-The reason why the API key was being invalid is because it was stored in "" when it was just supposed to be stored as it is.
 
-Gemini LLM will map the Kaggle symptoms and Mendeley symptoms by matching exact same symptoms that are worded differently.
+load_dotenv() kept coming False because it nevere received the API key file. So, pass the path to that file and if it gives True, it means it got the API key.
 
-Then, a table of 131 symptoms will be made and encoded following the Mendeley dataset. 
 
-The algorithms will be tested on the table and their accuracy, precision, AUC-ROC and recall will be measured.
+
+
+
+
