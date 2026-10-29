@@ -88,3 +88,7 @@ inflammatory nails -> irregular appearing nails
 brittle nails -> irregular appearing nails
 
 During the checking of the 109 Kaggle symptoms, these two symptoms didn't really match. 
+Therefore, all of the Kaggle symptoms got their Mendeley equivalent (even None).
+
+
+
