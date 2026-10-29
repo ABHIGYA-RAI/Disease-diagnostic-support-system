@@ -75,7 +75,16 @@ load_dotenv() kept coming False because it nevere received the API key file. So,
 
 To save new API key, load_dotenv(override=True) otherwise it will just load the previous key.
 
+109 Kaggle symptoms are to be compared now with Mendeley. 26 of them have absolutely no match. 83 are to be matched with their equivalence.
 
 
+Return the answer in JSON format: {{"<LIST A symptom>" : "<LIST B symptom or null>\n"}}
+: The JSON answer is a dictionary with mapped symptoms.
 
+ config = {"response_mime_type" : "application/json"}
+: This ensures that only the dictionary and nothing else is the response sent by the LLM.
 
+inflammatory nails -> irregular appearing nails
+brittle nails -> irregular appearing nails
+
+During the checking of the 109 Kaggle symptoms, these two symptoms didn't really match. 
