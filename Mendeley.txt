@@ -92,3 +92,18 @@ Therefore, all of the Kaggle symptoms got their Mendeley equivalent (even None).
 
 
 
+Now, building the Mendeley test table.
+A Mendeley test set that looks like the Kaggle training data: the same 131 symptom columns, filled in with the Mendeley patients’ symptoms, plus their disease labels. Feed it to the models and see how well they predict diseases they’ve never seen.
+
+
+new_mendeley has the diseases that are in both Mendeley and Kaggle.
+So, these diseases have to be encoded so that they can be used to compare with the machine's diseases during evaluation.
+
+for number,name in enumerate(disease_encoder.classes_):
+    print(number,name)
+0 (vertigo) Paroymsal  Positional Vertigo
+1 AIDS
+2 Acne
+3 Alcoholic hepatitis
+4 Allergy
+5 Arthritis
