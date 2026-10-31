@@ -120,3 +120,4 @@ print(label_map)
 
 The testing table must have all 131 Kaggle symptoms as that's what the machines expect
 The lookup table will have only those Kaggle symptoms which have their Mendeley equivalent.
+The, an entirely empty testing table will be made that has 0 in all cells.
