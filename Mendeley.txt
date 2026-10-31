@@ -107,3 +107,15 @@ for number,name in enumerate(disease_encoder.classes_):
 3 Alcoholic hepatitis
 4 Allergy
 5 Arthritis
+
+
+label_map[key] = value; key will always be inside the brackets. This is how the dictionary is made.
+label_map = { }
+for number,name in enumerate(disease_encoder.classes_):
+    label_map[name.strip().lower()] = number
+print(label_map)
+
+{'(vertigo) paroymsal  positional vertigo': 0, 'aids': 1, 'acne': 2, 'alcoholic hepatitis': 3, 'allergy': 4, 'arthritis': 5, 'bronchial asthma': 6, 'cervical spondylosis': 7, 'chicken pox': 8, 'chronic cholestasis': 9, 'common cold': 10, 'dengue': 11, 'diabetes': 12, 'dimorphic hemmorhoids(piles)': 13, 'drug reaction': 14, 'fungal infection': 15, 'gerd': 16, 'gastroenteritis': 17, 'heart attack': 18, 'hepatitis b': 19, 'hepatitis c': 20, 'hepatitis d': 21, 'hepatitis e': 22, 'hypertension': 23, 'hyperthyroidism': 24, 'hypoglycemia': 25, 'hypothyroidism': 26, 'impetigo': 27, 'jaundice': 28, 'malaria': 29, 'migraine': 30, 'osteoarthristis': 31, 'paralysis (brain hemorrhage)': 32, 'peptic ulcer diseae': 33, 'pneumonia': 34, 'psoriasis': 35, 'tuberculosis': 36, 'typhoid': 37, 'urinary tract infection': 38, 'varicose veins': 39, 'hepatitis a': 40}
+
+
+The testing table must have all 131 Kaggle symptoms as that's what the machines expect
