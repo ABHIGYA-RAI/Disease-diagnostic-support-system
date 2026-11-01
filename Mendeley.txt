@@ -128,3 +128,19 @@ Therefore, 102 out of the 131 symptoms columns carry the Mendeley symptoms where
 lookup_table has the Mendeley symptoms that will go for testing.
 
 The testing table will have the number of rows of the original Mendeley dataset as the testing patient input are to be taken from Mendeley whereas the symptoms columns will be of Kaggle.
+
+print(original_testing_dataset.shape)
+print(new_mendeley.shape)
+
+(246945, 378)
+(12648, 378)
+
+Only the shared diseases are now in new_mendeley and that is why the number of rows decreased dramatically.
+
+The testing dataframe has only 12,648 rows and 131 columns.
+
+new_mendeley[m].values are the cell values that are going to fill up the testing dataframe.
+
+The label of the testing_dataframe starts from 12974, not 1.
+
+A lookup table is to be made to stop the extra columns at the end to be added.
