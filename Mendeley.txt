@@ -147,3 +147,10 @@ A lookup table is to be made to stop the extra columns at the end to be added.
 
 F1 score is to be given highest consideration out of the four evaluation scores because it is a combination of both recall and precision. 
 Its average is macro so it treats both common and rare diseases equally which is the most important factor in disease diagnosis system. 
+
+probability=True makes the SVM able to output class probabilities, through predict_proba. By default it only gives a single predicted class. You need the probabilities for AUC-ROC, for the top-3 predictions in your app, and for soft-voting ensembles.
+
+KNN and Naive Bayes give the same result anyway in each run.
+
+SVM is set to probability=True because it gives out only one prediction and multiple classes are needed for top 3 diseases with probabilities.
+
