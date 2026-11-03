@@ -144,3 +144,6 @@ new_mendeley[m].values are the cell values that are going to fill up the testing
 The label of the testing_dataframe starts from 12974, not 1.
 
 A lookup table is to be made to stop the extra columns at the end to be added.
+
+F1 score is to be given highest consideration out of the four evaluation scores because it is a combination of both recall and precision. 
+Its average is macro so it treats both common and rare diseases equally which is the most important factor in disease diagnosis system. 
