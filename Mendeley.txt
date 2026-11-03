@@ -154,3 +154,14 @@ KNN and Naive Bayes give the same result anyway in each run.
 
 SVM is set to probability=True because it gives out only one prediction and multiple classes are needed for top 3 diseases with probabilities.
 
+
+
+2. Save the final Gemini mapping once, then load it instead of calling Gemini again:
+import json
+with open("actual_gemini_map.json","w") as f:
+    json.dump(actual_gemini_map,f)
+#in every later run
+with open("actual_gemini_map.json") as f:
+    actual_gemini_map = json.load(f)
+
+The Gemini map is stored in a JSON file as it allows to edit and read the map whereas the pickle file is just unreadable binary.
