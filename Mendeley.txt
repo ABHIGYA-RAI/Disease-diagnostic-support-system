@@ -159,6 +159,11 @@ The Gemini map is stored in a JSON file as it allows to edit and read the map wh
 
 
 
-Accuracy: The patients that machine had said to healthy or to have flu, actually did turned out to be true.
-Recall: How many flu patients the machine caught?
+Accuracy: The patients that machine had said to be healthy or to have flu, actually did turned out to be true.
+Recall: How many flu patients did the machine caught?
 Precision : Out of all the patients that are diagnosed to have flu, how many actually have it?
+
+Accuracy doesn't only care about correctly identifying the Corona patients, it also cares about identifying the healthy people and seperating them from patients
+which prevents wrongly flagging them. Accuracy prevents False Positive.
+
+F1 score will be low for the machines who ignore rare diseases.
