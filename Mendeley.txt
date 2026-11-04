@@ -166,4 +166,17 @@ Precision : Out of all the patients that are diagnosed to have flu, how many act
 Accuracy doesn't only care about correctly identifying the Corona patients, it also cares about identifying the healthy people and seperating them from patients
 which prevents wrongly flagging them. Accuracy prevents False Positive.
 
-F1 score will be low for the machines who ignore rare diseases.
+F1 score will be low for the machines who ignore rare diseases. 
+
+
+Rare diseases shouldn't be sidelined just because they're less reported. Even they should be correctly identified and their identification is evaluated by
+the F1 score.
+
+The top 3 F1 scorers are : Random Forest, Logistic Regression and Gaussian Naive Bayes. A tree, a linear and a probabilistic model makes a good ensemble.
+
+Model Tuning : GridSearchCV, RandomizedSearchCV and Optuna
+
+The F1 score of the ensemble came even way less than that of the individual ones.
+So, Gaussian Naive Bayes will be discarded away from the ensemble and it will be replaced by Cat Boost.
+
+The ensemble underperformed way worse than its individual members.
