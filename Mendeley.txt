@@ -180,3 +180,7 @@ The F1 score of the ensemble came even way less than that of the individual ones
 So, Gaussian Naive Bayes will be discarded away from the ensemble and it will be replaced by Cat Boost.
 
 The ensemble underperformed way worse than its individual members.
+The tuned Random Forest performed worse than the untuned one.
+
+
+At last, Random Forest turned out to be the deployed machine.
