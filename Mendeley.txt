@@ -187,4 +187,8 @@ At last, Random Forest turned out to be the deployed machine.
 
 Tuning it decreased its F1 score tremendously more than its untuned F1 score.
 
-Ensemble of linear, ensemble and probabilistic didn't work out and neither did theie tuning would.
+Ensemble of linear, ensemble and probabilistic didn't work out and neither did these tuning would.
+
+Removing Gaussian from the ensemble and introducing CatBoost into the ensemble with LR and RF didn't increase the F1 score either.
+
+
