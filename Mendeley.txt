@@ -184,3 +184,5 @@ The tuned Random Forest performed worse than the untuned one.
 
 
 At last, Random Forest turned out to be the deployed machine.
+
+Tuning it decreased its F1 score tremendously more than its untuned F1 score.
