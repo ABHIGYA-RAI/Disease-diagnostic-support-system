@@ -13,7 +13,7 @@ if "page" not in st.session_state:
 
 
 def go_next():
-    st.session_state.page = "diagnosis"
+    st.switch_page("pages/Diagnosis.py")
 
 
 def go_home():
