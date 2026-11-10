@@ -102,7 +102,7 @@ div.stButton, [data-testid="stButton"],
 div.stButton > button, [data-testid^="stBaseButton"] {{
     background: {NAVY} !important; color: #ffffff !important;
     border: none !important; border-radius: 18px !important;
-    width: 250px !important; height: 150px; min-height: 0;
+    width: 250px !important; height: 70px; min-height: 0;
     box-shadow: 0 6px 16px rgba(21,43,94,.30);
     transition: transform .12s ease, background .12s ease;
 }}
