@@ -199,3 +199,5 @@ for d,p in the_three_diseases -> automatically gets a tuple and then gets the d 
 unsafe_allow_html=True
 This allows my HTML and CSS styles to be executed.
 If not for this, Streamlit would just paste the HTML/CSS code as a block of plain text.
+
+The diagnosed disease is displayed in a page where the bar length corresponds to the probability.
