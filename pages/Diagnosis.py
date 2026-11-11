@@ -1,3 +1,4 @@
+
 import os, json
 import joblib
 import numpy as np
@@ -8,10 +9,33 @@ from google import genai
 
 st.set_page_config(page_title="Diagnosis", page_icon="🩺")
 
+st.markdown("""
+<style>
+.stApp {
+    background-color: #eaf3fc;
+    color: black;
+}
+
+h1, p, label, span, div {
+    color: black;
+}
+
+textarea {
+    background-color: white !important;
+    color: black !important;
+}
+
+button {
+    color: black !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 symptoms = joblib.load(os.path.join(folder, "Symptoms.pkl"))
 model = joblib.load(os.path.join(folder, "Final Model.pkl"))
 disease_encoder = joblib.load(os.path.join(folder, "Disease Encoder.pkl"))
+
 load_dotenv(os.path.join(folder, "API Key.env"))
 client = genai.Client(api_key=os.environ["API_saacho"])
 
@@ -23,11 +47,13 @@ Return only a JSON list.
 
 TEXT: {user_text}
 LIST: {symptom_list}"""
+
     response = client.models.generate_content(
         model="gemini-3.5-flash-lite",
         contents=prompt,
         config={"response_mime_type": "application/json"}
     )
+
     matched = json.loads(response.text)
     return [s for s in matched if s in symptom_list]
 
@@ -40,7 +66,7 @@ if st.button("Continue"):
         st.warning("Please describe your symptoms.")
     else:
         try:
-            with st.spinner("Reading your symptoms..."):# noqa
+            with st.spinner("Reading your symptoms..."):
                 chosen = map_symptoms(text, symptoms)
 
             if not chosen:
@@ -54,6 +80,7 @@ if st.button("Continue"):
                 names = disease_encoder.inverse_transform(model.classes_[top])
 
                 st.session_state["top3"] = list(zip(names, probs[top]))
-                st.switch_page("pages/Results.py")
+                st.switch_page("pages/Possible_diseases.py")
+
         except Exception as e:
             st.error(f"Something went wrong: {e}")
