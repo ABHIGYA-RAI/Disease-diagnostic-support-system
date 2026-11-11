@@ -192,3 +192,6 @@ Ensemble of linear, ensemble and probabilistic didn't work out and neither did t
 Removing Gaussian from the ensemble and introducing CatBoost into the ensemble with LR and RF didn't increase the F1 score either.
 
 
+the_three_diseases = [("Allergy", 0.62), ("Common Cold",0.21),("Flu",0.09)]
+
+for d,p in the_three_diseases -> automatically gets a tuple and then gets the d and p from each tuple.
