@@ -202,4 +202,4 @@ If not for this, Streamlit would just paste the HTML/CSS code as a block of plai
 
 The diagnosed disease is displayed in a page where the bar length corresponds to the probability.
 
-
+The next step is to design the Diagnosis.py page.
