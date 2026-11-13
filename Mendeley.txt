@@ -206,3 +206,5 @@ The next step is to design the Diagnosis.py page.
 
 The page will have a text box and then the Gemini LLM is to be integrated.
 
+Gemini integration is a must. It will automatically map user's plain symptoms with the 131 Kaggle symptoms
+that Forest knows.
