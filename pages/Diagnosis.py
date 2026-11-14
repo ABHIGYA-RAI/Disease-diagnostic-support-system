@@ -86,3 +86,4 @@ if st.button("Continue"):
             st.error(f"Something went wrong: {e}")
 
 # spinner literally is the spinning loading icon that appears when the page is buffering.
+#st.session_state["top3"] = list(zip(names, probs[top])): this line is used even in Possible Diseases.py file
