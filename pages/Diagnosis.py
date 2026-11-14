@@ -84,3 +84,5 @@ if st.button("Continue"):
 
         except Exception as e:
             st.error(f"Something went wrong: {e}")
+
+# spinner literally is the spinning loading icon that appears when the page is buffering.
