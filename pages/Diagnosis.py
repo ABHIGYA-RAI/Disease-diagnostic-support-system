@@ -1,5 +1,4 @@
-import os
-import json
+import os, json
 import joblib
 import numpy as np
 import pandas as pd
@@ -7,27 +6,25 @@ import streamlit as st
 from dotenv import load_dotenv
 from google import genai
 
-st.set_page_config(page_title="Diagnosis", page_icon="🩺")
+st.set_page_config(page_title="😷Submit your symptoms", page_icon="🩺")
 
 st.markdown("""
 <style>
-.stApp {
-    background-color: #eaf3fc;
-    color: black;
-}
+.stApp { background-color: #eaf3fc; }
+h1, p, label, span, div { color: black; }
+textarea { background-color: white !important; color: black !important; }
 
-h1, p, label, span, div {
-    color: black;
-}
+/* Blue button with white text */
+.stButton button { background-color: #1e73e8 !important; border: none; }
+.stButton button p { color: white !important; }
 
-textarea {
-    background-color: white !important;
-    color: black !important;
+/* Black loading icon */
+[data-testid="stSpinnerIcon"],
+[data-testid="stSpinner"] i {
+    border-color: black !important;
+    border-top-color: transparent !important;
 }
-
-button {
-    color: black !important;
-}
+[data-testid="stSpinner"] svg { stroke: black !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -42,11 +39,11 @@ client = genai.Client(api_key=os.environ["API_saacho"])
 
 def map_symptoms(user_text, symptom_list):
     prompt = f"""From the patient's text, pick every matching symptom from the LIST.
-Use only names exactly as written in the LIST. If none match, return [].
-Return only a JSON list.
+    Use only names exactly as written in the LIST. If none match, return [].
+    Return only a JSON list.
 
-TEXT: {user_text}
-LIST: {symptom_list}"""
+    TEXT: {user_text}
+    LIST: {symptom_list}"""
 
     response = client.models.generate_content(
         model="gemini-3.5-flash-lite",
@@ -58,30 +55,41 @@ LIST: {symptom_list}"""
     return [s for s in matched if s in symptom_list]
 
 
-st.title("Describe your symptoms")
-text = st.text_area("Tell us how you feel, in your own words", height=150)
+st.markdown(
+    "<h1 style='text-align: center; font-weight: bold;'>✍️Describe your symptoms</h1>",
+    unsafe_allow_html=True
+)
 
-if st.button("Continue"):
+text = st.text_area(
+    "What are you suffering from?",
+    placeholder="My head has been hurting a lot since this morning.",
+    height=150
+)
+
+# The button lives inside this slot so we can remove it after a click
+button_slot = st.empty()
+
+if button_slot.button("Report symptoms"):
     if not text.strip():
         st.warning("Please describe your symptoms.")
     else:
+        button_slot.empty()  # hide the button
         try:
-            with st.spinner("Reading your symptoms..."):
+            with st.spinner("Analysing your symptoms"):
                 chosen = map_symptoms(text, symptoms)
 
-            if not chosen:
-                st.warning("We couldn't recognize any symptoms. Please try rephrasing.")
-            else:
-                row = pd.DataFrame(0, index=[0], columns=symptoms)
-                row.loc[0, chosen] = 1
+                if not chosen:
+                    st.warning("We couldn't recognize any symptoms. Please try rephrasing.")
+                else:
+                    row = pd.DataFrame(0, index=[0], columns=symptoms)
+                    row.loc[0, chosen] = 1
 
-                probs = model.predict_proba(row)[0]
-                top = np.argsort(probs)[::-1][:3]
-                names = disease_encoder.inverse_transform(model.classes_[top])
+                    probs = model.predict_proba(row)[0]
+                    top = np.argsort(probs)[::-1][:3]
+                    names = disease_encoder.inverse_transform(model.classes_[top])
 
-                st.session_state["top3"] = list(zip(names, probs[top]))
-                st.switch_page("pages/Possible_diseases.py")
+                    st.session_state["top3"] = list(zip(names, probs[top]))
+                    st.switch_page("pages/Possible_diseases.py")
 
         except Exception as e:
             st.error(f"Something went wrong: {e}")
-
