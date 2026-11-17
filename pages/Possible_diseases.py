@@ -75,8 +75,7 @@ font-size: 28px;
 font-weight: bold;
 letter-spacing: 2px;
 text-transform: uppercase;
-width: 200px;
-height: 80px;
+padding : .7rem 3rem;
 border: none;
 border-radius: 45px;
 box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
@@ -84,7 +83,7 @@ box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
 
 div.stButton > button p{
 color: #ffffff !important;
-font-size: 28px;
+font-size: 30px;
 font-weight: bold;
 font-family: "EB Garamond",Garamond,serif !important;
 }
