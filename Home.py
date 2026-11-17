@@ -19,7 +19,7 @@ radial-gradient(circle at 85% 75%, rgba(0,190,180, .20), transparent 40%),
 linear-gradient(135deg, #eef3ff, #f8f5ff) ;}
 
 
-.block-container{ max-width: 96vw; padding: 1.5vh 1.5rem 1vh !important;}
+.block-container{ max-width: 96vw; padding: 4.5rem 1.5rem 1vh !important;}
 [data-testid="stVerticalBlock"]{gap:0 !important;}
 [data-testid="stHorizontalBlock"]{margin-top: 5vh;}
 
