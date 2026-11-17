@@ -7,6 +7,7 @@ slt.set_page_config(
 )
 slt.markdown("""
 <style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
 .stApp{
 background-color: #e3f2fd;
 }
@@ -61,6 +62,39 @@ color: #AAB8C5;
 font-size: 14px;
 margin-top: 25px;
 }
+
+.spacer{
+height: 60px;
+}
+
+div.stButton > button{
+background: linear-gradient(90deg, #1e3a8a, #2563eb);
+color: #ffffff;
+font-family: "EB Garamond",Garamond, serif !important;
+font-size: 28px;
+font-weight: bold;
+letter-spacing: 2px;
+text-transform: uppercase;
+width: 200px;
+height: 80px;
+border: none;
+border-radius: 45px;
+box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+div.stButton > button p{
+color: #ffffff !important;
+font-size: 28px;
+font-weight: bold;
+font-family: "EB Garamond",Garamond,serif !important;
+}
+
+div.stButton > button:hover{
+background: linear-gradient(90deg, #1e3a8a, #2563eb);
+color: #ffffff;
+border: none;
+box-shadow: 0 12px 30px rgba(37, 99, 235, 0.5);
+}
 </style>
 """,unsafe_allow_html=True)
 
@@ -112,5 +146,7 @@ Consult a licensed healthcare professional for proper evaluation.
 </div>
 """,unsafe_allow_html=True)
 
+slt.markdown('<div class="spacer"></div>', unsafe_allow_html=True)
 
-
+if slt.button("Next"):
+    slt.switch_page("pages/Note_on_results.py")
