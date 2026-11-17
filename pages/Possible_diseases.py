@@ -83,7 +83,7 @@ box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
 
 div.stButton > button p{
 color: #ffffff !important;
-font-size: 30px;
+font-size: 1.5rem;
 font-weight: bold;
 font-family: "EB Garamond",Garamond,serif !important;
 }
