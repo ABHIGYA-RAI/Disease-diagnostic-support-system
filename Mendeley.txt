@@ -213,3 +213,8 @@ Then the encoding in the single row, the row "fed" to Forest
 and Forest making the diagnosis are all done in the
 Diagnosis.py page.
 
+
+if slt.button("CONTINUE",disabled=not agree):
+This means: If the agree checkbox is not checked,disable the button.
+          : But, if the agree checkbox is checked, enable the button and let the user proceed to the How_you_should_write_your_symptoms.py page.
+
