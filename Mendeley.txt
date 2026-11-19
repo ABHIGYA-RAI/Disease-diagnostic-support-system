@@ -235,3 +235,10 @@ must be made more attractive.
 responds with [ ] and no disease could be identified for it,
 that backend must be checked. Maybe changing the prompt
 would help.
+
+chosen = map_symptoms(textarea,symptoms)
+                if not chosen:
+                    slt.warning("Your symptoms couldn't be recognized. Please try rephrasing it.")
+
+What this means: chosen = [user == 131]
+if not chosen means [user != 131]; then "We couldn't recognize your symptoms which is absolutely not your fault and is the entire fault of the system. This is the system's biggest limitation."
