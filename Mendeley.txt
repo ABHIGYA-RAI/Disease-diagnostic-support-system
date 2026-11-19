@@ -225,7 +225,8 @@ home page to the ending page.
 There are a few pre-production testing/ bug fixing/ pre-deployment debugging that has to be done:
 
 1. Gemini LLM should be integrated again at the point where the analysis results
-are shown. If the diseases are embarrasingly unrelated,
+are shown. If the diseases are embarrassingly unrelated,
 they must be removed by Gemini. No such diseases and their probabilities.
 
-
+2. The button and other layout of symptoms reporting page
+must be made more attractive.
