@@ -230,3 +230,8 @@ they must be removed by Gemini. No such diseases and their probabilities.
 
 2. The button and other layout of symptoms reporting page
 must be made more attractive.
+
+3. When the symptoms that ARE in 131 are given, yet still Gemini
+responds with [ ] and no disease could be identified for it,
+that backend must be checked. Maybe changing the prompt
+would help.
