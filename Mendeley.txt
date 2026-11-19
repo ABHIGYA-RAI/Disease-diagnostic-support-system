@@ -219,4 +219,5 @@ This means: If the agree checkbox is not checked,disable the button.
           : But, if the agree checkbox is checked, enable the button and let the user proceed to the How_you_should_write_your_symptoms.py page.
 
 The final website application has been successfully designed.
-
+The end-to-end point of this application has been created from the
+home page to the ending page.
